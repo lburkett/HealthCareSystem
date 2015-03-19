@@ -5,4 +5,4 @@ for CSE 310 - Intro to Software Engineering.
 * Nikita Bhambhani
 * Spencer Bywater
 * Connor Maddox
-* Kevin Van
+* Kevin Van was here
