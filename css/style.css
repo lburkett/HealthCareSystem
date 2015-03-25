@@ -12,23 +12,57 @@ body {
 .section {
   text-align: center; }
 
-/*HEADING-LANDING section*/
+/*HEADING-LANDING section -- LANDING PAGE ONLY!!!*/
+@media (min-width: 400px) {
+  h1.fit-title {
+    padding-top: 6rem;
+    padding-bottom: 4.5rem; } }
 .heading-landing {
   border-top: 4px solid #e3fcff;
   background-color: #00a0b0;
   background-image: linear-gradient(to top, #005a63 0%, #00a0b0 15%);
   color: white;
-  padding-top: 6rem;
-  padding-bottom: 4.5rem; }
-  .heading-landing h1 {
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem; }
+  .heading-landing h1.fit-title {
     text-align: center;
     text-shadow: 0px 0px 10px #008997; }
 
+/*HEADING*/
+.heading {
+  border-top: 3px solid #e3fcff;
+  background-color: #00a0b0;
+  background-image: linear-gradient(to top, #005a63 0%, #00a0b0 15%);
+  color: white;
+  padding-top: 1rem; }
+  .heading h1.fit-title-base {
+    font-size: 1.9rem;
+    margin-top: 0.5rem;
+    text-align: left;
+    text-shadow: 0px 0px 10px #008997; }
+  .heading a {
+    text-decoration: none;
+    color: white; }
+  .heading img {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-top: -0.2rem;
+    margin-right: 0.8rem; }
+
+@media (min-width: 400px) {
+  h1.fit-title-base {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 3.0rem !important; }
+
+  img {
+    margin-top: 0.4rem !important; } }
 /*WELCOME section*/
 .welcome {
   padding-top: 4rem;
   border-top: 1px solid #7df3ff;
-  background-image: linear-gradient(to bottom, #e6e6e6 5px, white 25%); }
+  background-image: linear-gradient(to bottom, #e6e6e6 5px, white 50px); }
   .welcome h4 {
     font-style: italic; }
 
@@ -55,14 +89,17 @@ body {
 /*FOOTER section*/
 .footer {
   min-height: 50px;
-  margin-top: 70px;
+  margin-top: 30px;
   bottom: 0px;
-  border-top: 1px solid #888888;
+  border-top: 1px dashed #a2a2a2;
   color: #6f6f6f; }
   .footer p {
     margin-top: 1.2rem;
     margin-bottom: 1.2rem; }
 
+@media (min-width: 400px) {
+  .footer {
+    margin-top: 70px; } }
 .footerbar {
   background-color: #00a0b0; }
   .footerbar .color-sty {
@@ -80,3 +117,21 @@ body {
     background-color: #eb6841; }
   .footerbar .color5 {
     background-color: #edc951; }
+
+/*CONTENT section*/
+.content, .landing-content {
+  -webkit-flex: 1;
+  flex: 1; }
+
+.content {
+  padding-top: 4rem;
+  border-top: 1px solid #7df3ff;
+  background-image: linear-gradient(to bottom, #e6e6e6 5px, white 50px); }
+
+/*OTHER styles*/
+body {
+  display: -webkit-flex;
+  display: flex;
+  min-height: 100vh;
+  -webkit-flex-direction: column;
+  flex-direction: column; }

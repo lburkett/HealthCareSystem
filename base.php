@@ -40,36 +40,17 @@
 <body>
 
   <!-- HEADING-LANDING section -->
-  <div class="section heading-landing">
+  <div class="section heading">
     <div class="container">
-      <h1 class="fit-title">Efferent Patient Care System</h1>
+      <a href="index.php"><img src="images/heart.png" alt="Efferent Patient Care System"><h1 class="fit-title-base">Efferent Patient Care System</h1></a>
     </div>
   </div>
 
-  <!-- WELCOME section -->
-  <div class="landing-content">
-  <div class="section welcome">
+  <div class="section content">
     <div class="container">
-      <h4 class="wlcm">Welcome!</h4>
+      <!-- CONTENT GOES HERE! -->
+      Write things here, do php wizardy.
     </div>
-  </div>
-
-  <!-- DIRECT section -->
-  <div class="section direct">
-    <div class="container">
-      <div class="row">
-        <div class="four columns"><br></div>
-        <div class="four columns navigate">
-          <h5>I'm a...</h5>
-          <a href="#" class="button button-primary">Patient</a>
-          <br>
-          <a href="#" class="button button-primary">Doctor</a>
-
-        </div>
-        <div class="four columns"><br></div>
-      </div>
-    </div>
-  </div>
   </div>
 
   <!-- FOOTER section -->
