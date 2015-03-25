@@ -1,0 +1,116 @@
+/*EDITABLE: This is the SCSS file--it will be compiled into the style.css file. 
+------------This is the file that should be edited, not the style.css file.
+*/
+
+/*VARIABLES*/
+$white: #fff;
+$black: #000;
+$base-black: #222;
+$blue: #00A0B0;
+$brown: #6A4A3C;
+$red: #CC333F;
+$orange: #EB6841;
+$yellow: #EDC951;
+$ice-blue: lighten($blue, 40%);
+
+body { 
+	background: $white;
+}
+
+/*-------------------
+ LANDING PAGE STYLES
+-------------------*/
+
+/*Section styles */
+.section {
+	text-align: center;
+}
+
+/*HEADING-LANDING section*/
+.heading-landing {
+	border-top: 4px solid lighten($blue, 60%);
+	background-color: $blue;
+	background-image: linear-gradient(to top, darken($blue, 15%) 0%, $blue 15%);
+	color: $white;
+	padding-top: 6rem;
+	padding-bottom: 4.5rem;
+	h1 {
+		text-align: center;
+		text-shadow: 0px 0px 10px darken($blue, 5%);
+		//letter-spacing: .1px;
+	}
+}
+
+/*WELCOME section*/
+.welcome {
+	padding-top: 4rem;
+	border-top: 1px solid $ice-blue;
+	background-image: linear-gradient(to bottom, darken($white, 10%) 5px, $white 25%);
+	h4 {
+		font-style: italic;
+	}
+}
+
+/*DIRECT section*/
+.direct {
+	.navigate {
+		background-color: lighten($blue, 60%);
+		border: 2px solid lighten($blue, 5%);
+		border-radius: 2px;
+		text-align: center;
+		padding-bottom: 20px;
+		//color: $white;
+		a {
+			text-decoration: none;
+			color: $white;
+			margin: 10px auto;
+		}
+		.btn {
+			background-color: $blue;
+			line-height: 100%;
+			border-radius: 5px;
+			padding: 10px;
+			margin: 5px auto;
+		}
+		h5 {
+			margin-top: 20px;
+		}
+	}
+}
+
+/*FOOTER section*/
+.footer {
+	min-height: 50px;
+	margin-top: 70px;
+	bottom: 0px;
+	border-top: 1px solid lighten($base-black, 40%);
+	color: lighten($base-black, 30%);
+	p {
+		margin-top: 1.2rem;
+		margin-bottom: 1.2rem;
+	}
+}
+.footerbar {
+	background-color: $blue;
+	.color-sty {
+		height: 4px;
+		width: 25%;
+		display: block;
+		float: left;
+	}
+	.color1 {
+		background-color: $blue;
+	}
+	.color2 {
+		background-color: $brown;
+	}
+	.color3 {
+		background-color: $red;
+	}
+	.color4 {
+		background-color: $orange;
+	}
+	.color5 {
+		background-color: $yellow;
+	}
+}

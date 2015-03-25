@@ -1,0 +1,82 @@
+/*EDITABLE: This is the SCSS file--it will be compiled into the style.css file. 
+------------This is the file that should be edited, not the style.css file.
+*/
+/*VARIABLES*/
+body {
+  background: white; }
+
+/*-------------------
+ LANDING PAGE STYLES
+-------------------*/
+/*Section styles */
+.section {
+  text-align: center; }
+
+/*HEADING-LANDING section*/
+.heading-landing {
+  border-top: 4px solid #e3fcff;
+  background-color: #00a0b0;
+  background-image: linear-gradient(to top, #005a63 0%, #00a0b0 15%);
+  color: white;
+  padding-top: 6rem;
+  padding-bottom: 4.5rem; }
+  .heading-landing h1 {
+    text-align: center;
+    text-shadow: 0px 0px 10px #008997; }
+
+/*WELCOME section*/
+.welcome {
+  padding-top: 4rem;
+  border-top: 1px solid #7df3ff;
+  background-image: linear-gradient(to bottom, #e6e6e6 5px, white 25%); }
+  .welcome h4 {
+    font-style: italic; }
+
+/*DIRECT section*/
+.direct .navigate {
+  background-color: #e3fcff;
+  border: 2px solid #00b7ca;
+  border-radius: 2px;
+  text-align: center;
+  padding-bottom: 20px; }
+  .direct .navigate a {
+    text-decoration: none;
+    color: white;
+    margin: 10px auto; }
+  .direct .navigate .btn {
+    background-color: #00a0b0;
+    line-height: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px auto; }
+  .direct .navigate h5 {
+    margin-top: 20px; }
+
+/*FOOTER section*/
+.footer {
+  min-height: 50px;
+  margin-top: 70px;
+  bottom: 0px;
+  border-top: 1px solid #888888;
+  color: #6f6f6f; }
+  .footer p {
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem; }
+
+.footerbar {
+  background-color: #00a0b0; }
+  .footerbar .color-sty {
+    height: 4px;
+    width: 25%;
+    display: block;
+    float: left; }
+  .footerbar .color1 {
+    background-color: #00a0b0; }
+  .footerbar .color2 {
+    background-color: #6a4a3c; }
+  .footerbar .color3 {
+    background-color: #cc333f; }
+  .footerbar .color4 {
+    background-color: #eb6841; }
+  .footerbar .color5 {
+    background-color: #edc951; }
