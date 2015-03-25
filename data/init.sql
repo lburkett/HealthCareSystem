@@ -16,7 +16,7 @@ CREATE TABLE patient (
     depression INTEGER NOT NULL,
     anxiety INTEGER NOT NULL,
     drosiness INTEGER NOT NULL,
-    average INTEGER NOT NULL, /* should be a double equivalent */
+    average REAL NOT NULL,
 
-    resolved BOOLEAN NOT NULL,
+    resolved INTEGER NOT NULL /* 0 - FALSE, 1 - TRUE */
 );
