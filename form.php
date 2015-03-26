@@ -2,6 +2,7 @@
 <!-- Enter any extra code that should go inside the <head> tag here! Do this ONLY if this page needs a script or something that the other pages do not. -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script type="text/javascript">
+// Prevents the jQuery mobile handler from taking over screen switching. 
 $(document).bind("mobileinit", function () {
     $.mobile.ajaxEnabled = false;
 });
@@ -19,7 +20,7 @@ $(document).bind("mobileinit", function () {
 	}
 </script>-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-<link rel="stylesheet" href="scripts/jquery.mobile.readable.css">
+<link rel="stylesheet" href="scripts/jquery.mobile.min.css">
 
 <?php require 'templates/header.php'; ?>
   <!-- Any content should go inside the container where indicated -->
