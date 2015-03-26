@@ -178,6 +178,17 @@ body {
 
 }
 
+/*FORM styles */
+.explanation {
+	text-align: left;
+}
+form.symptoms-form {
+
+	label {
+		text-align: left;
+	}
+}
+
 /*OTHER styles*/
 body {
 	display: -webkit-flex;
@@ -186,3 +197,4 @@ body {
 	-webkit-flex-direction: column;
 	flex-direction: column;
 }
+

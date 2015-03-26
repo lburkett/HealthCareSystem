@@ -1,0 +1,100 @@
+<?php require 'templates/meta.php'; ?>
+<!-- Enter any extra code that should go inside the <head> tag here! Do this ONLY if this page needs a script or something that the other pages do not. -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+<link rel="stylesheet" href="scripts/jquery.mobile.min.css">
+
+<?php require 'templates/header.php'; ?>
+  <!-- Any content should go inside the container where indicated -->
+  <div class="section content">
+    <div class="container">
+		<!-- CONTENT GOES HERE! -->
+		<h3>Symptom Assessment Form</h3>
+		<p>Welcome to the Edmonton Symptom Assessment Form! This system will ask first for some quick information and then for some input related to a few common symptoms. Please answer as accurately as possible.</p>
+		
+		<hr>
+
+		<form action="" class="symptoms-form">
+			<!-- PERSONAL INFO -->
+			<div class="explanation">
+				<h4>Personal Information</h4>
+				<p>First, some quick info:</p>
+			</div>
+			<div class="row">
+				<div class="four columns">
+					<label for="firstName">First Name</label>
+					<input type="text" class="u-full-width" placeholder="First Name" id="firstName">
+				</div>
+				<div class="four columns">
+					<label for="lastName">Last Name</label>
+					<input type="text" class="u-full-width" placeholder="Last Name" id="lastName">
+				</div>
+				<div class="four columns">
+					<label for="phone">Phone Number</label>
+					<input type="text" class="u-full-width" placeholder="Phone Number" id="phone">
+				</div>
+			</div>
+
+			<hr>
+			<!-- SYMPTOMS -->
+			<div class="explanation">
+				<h4>Symptoms</h4>
+				<p>We would like to know how you're feeling so we can help you better! Please rate the following 5 symptoms on a scale of 0 to 10. 0 means no pain, 10 signifies extreme pain.</p>
+			</div>
+			<div class="row">
+				<label for="pain">Pain:</label>
+				<input type="range" name="slider-1" id="pain" min="0" max="10" value="0" data-highlight="true" class="u-full-width">
+			</div>
+			<div class="row">
+				<label for="nausea">Nausea:</label>
+					<input type="range" name="slider-1" id="nausea" min="0" max="10" value="0" data-highlight="true" class="u-full-width">
+			</div>
+			<div class="row">
+				<label for="depression">Depression:</label>
+				<input type="range" name="slider-1" id="depression" min="0" max="10" value="0" data-highlight="true" class="u-full-width">
+			</div>
+			<div class="row">
+				<label for="anxiety">Anxiety:</label>
+				<input type="range" name="slider-1" id="anxiety" min="0" max="10" value="0" data-highlight="true" class="u-full-width">
+				
+			</div>
+			<div class="row">
+				<label for="drowsiness">Drowsiness:</label>
+				<input type="range" name="slider-1" id="drowsiness" min="0" max="10" value="0" data-highlight="true" class="u-full-width">
+			</div>
+			
+			<hr>
+			<!-- EXTRA -->
+			<div class="explanation">
+				<h4>A few final things</h4>
+				<p>Please enter the name of the person who filled out the form, and make sure to select the doctor you wish to see.</p>
+			</div>
+			<div class="row">
+				<div class="six columns">
+					<label for="filledOutBy">Filled out by:</label>
+					<input type="text" class="u-full-width" placeholder="Filled out by" id="filledOutBy">
+				</div>
+				<div class="six columns">
+					<label for="doctorRequested">Doctor Requested:</label>
+					<select class="u-full-width" id="doctorRequested">
+						<option value="Doctor Van">Doctor Van - Pediatrics</option>
+						<option value="Doctor Bywater">Doctor Bywater - Optometry</option>
+						<option value="Doctor Maddox">Doctor Maddox - Podiatrist</option>
+						<option value="Doctor Burkett">Doctor Burkett - Sports medicine</option>
+						<option value="Doctor Bhambhani">Doctor Bhambhani - Cardiology</option>
+					</select>
+				</div>
+			</div>
+			
+			<br>
+			<!-- SUBMIT -->
+			<p>Double check your information and press submit!</p>
+			<input class="button-primary" type="submit" value="Submit" id="submit-button">
+		</form>
+
+
+
+    </div>
+  </div>
+
+<?php require 'templates/footer.php'; ?>

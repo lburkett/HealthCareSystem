@@ -128,6 +128,13 @@ body {
   border-top: 1px solid #7df3ff;
   background-image: linear-gradient(to bottom, #e6e6e6 5px, white 50px); }
 
+/*FORM styles */
+.explanation {
+  text-align: left; }
+
+form.symptoms-form label {
+  text-align: left; }
+
 /*OTHER styles*/
 body {
   display: -webkit-flex;
