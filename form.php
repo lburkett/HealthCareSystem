@@ -13,7 +13,7 @@ $(document).bind("mobileinit", function () {
 		var lastName = document.getElementByID("lastName");
 		var phoneNumber = document.getElementByID("phone");
 		var filledOutBy = document.getElementByID("filledOutBy");
-		if(firstName == "" || lastName == "" || phoneNumber == "" || filledOutBy == "") {
+		if(firstName === "" || lastName === "" || phoneNumber === "" || filledOutBy === "") {
 			alert("Fill out blank fields");
 		}
 	}
@@ -95,6 +95,7 @@ $(document).bind("mobileinit", function () {
 				<div class="six columns">
 					<label for="doctorRequested">Doctor Requested:</label>
 					<select class="u-full-width" id="doctorRequested" data-role="none" name="doctorRequested">
+						<option value="">N/A</option>
 						<option value="Doctor Van">Doctor Van - Pediatrics</option>
 						<option value="Doctor Bywater">Doctor Bywater - Optometry</option>
 						<option value="Doctor Maddox">Doctor Maddox - Podiatrist</option>
@@ -107,7 +108,7 @@ $(document).bind("mobileinit", function () {
 			<br>
 			<!-- SUBMIT -->
 			<p>Double check your information and press submit!</p>
-			<input class="button-primary" type="submit" value="Submit" id="submit-button" data-role="none" onclick="isEmpty()">
+			<input class="button-primary" type="submit" value="Submit" id="submit-button" data-role="none">
 		</form>
 
 

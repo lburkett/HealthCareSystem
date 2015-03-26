@@ -1,13 +1,13 @@
 <?php
-
 	class Patient {
-		// Information
+		/* Information */
+		protected $id;
 		protected $firstName;
 		protected $lastName;
 		protected $phoneNumber;
 		protected $filled;
 		protected $doctor;
-		// Symptoms
+		/* Symptoms */
 		protected $pain;
 		protected $nausea;
 		protected $depression;
@@ -15,7 +15,10 @@
 		protected $drowsiness;
 		protected $average;
 
-		// Set functions
+		/* Set variable functions */
+		public function setID($newVar) {
+			$this->id = $newVar;
+		}
 		public function setFirstName($newVar) {
 			$this->firstName = $newVar;
 		}
@@ -50,7 +53,10 @@
 			$this->average = ($this->pain + $this->nausea + $this->depression + $this->anxiety + $this->drowsiness) / 2;
 		}
 
-		// Get functions
+		/* Get variable functions */
+		public function getID() {
+			return $this->id;
+		}
 		public function getFirstName() {
 			return $this->firstName;
 		}
@@ -85,7 +91,7 @@
 			return $this->average;
 		}
 
-		// Other functions
+		/* Prints out all viariables */
 		public function __toString() {
 			echo "First Name: " . $this->getFirstName() . "<br>";
 			echo "Last Name: " . $this->getLastName() . "<br>";
@@ -100,5 +106,4 @@
 			echo "Average: " . $this->getAverage() . "<br>";
 		}	
 	}
-
 ?>

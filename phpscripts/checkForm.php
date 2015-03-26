@@ -1,9 +1,9 @@
 <?php
-
 	require '../classes/patient.php';
 
 	$newPatient = new Patient;
 
+	// Sets new patient information
 	$newPatient->setFirstName($_POST['firstName']);
 	$newPatient->setLastName($_POST['lastName']);
 	$newPatient->setPhoneNumber($_POST['phone']);
@@ -17,5 +17,6 @@
 	$newPatient->setDrowsiness($_POST['drowsiness']);
 	$newPatient->calculateAverage();
 
+	// Prints out new patient information
 	$newPatient->__toString();
 ?>
