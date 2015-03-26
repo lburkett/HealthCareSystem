@@ -111,8 +111,6 @@ $(document).bind("mobileinit", function () {
 			<input class="button-primary" type="submit" value="Submit" id="submit-button" data-role="none">
 		</form>
 
-
-
     </div>
   </div>
 

@@ -1,41 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<?php require 'templates/meta.php'; ?>
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Efferent Patient Care System</title>
-  <meta name="description" content="Efferent Patient Care System">
-  <meta name="author" content="Spencer Bywater, Lowell Burkett, Nikita Bhambhani, Connor Maddox, Kevin Van">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,700|Source+Sans+Pro:400,300,600" rel="stylesheet" type="text/css">
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- Favicon 
-  ––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-  <!-- Scripts
-  ––––––––––––––––––––––––––––––––––––––––––––––––– 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-  <script src="scripts/jquery.fittext.js"></script>
-  <script type="text/javascript">
-    $("h1").fitText(0.1, { minFontSize: '46px', maxFontSize: '72px'});
-  </script>
-  -->
-
+<!-- The landing page is a bit different so we don't include header.php here. -->
 </head>
 <body>
 
@@ -63,7 +28,10 @@
           <h5>I'm a...</h5>
           <a href="form.php" class="button button-primary" style="margin-left: 2px;">Patient</a>
           <br>
-          <a href="#" class="button button-primary">*NOT DONE* Doctor</a>
+          <!-- <a href="#" class="button button-primary">*NOT DONE* Doctor</a> -->
+          <!-- NOTE!: the button below is just to show it's disabled (cleaner-looking). Replace it with the above^ commented-out
+               tag <a href...> when doctor page is made, then delete the button below. :D -->
+          <button disabled>Doctor</button>
 
         </div>
         <div class="four columns"><br></div>
@@ -72,26 +40,4 @@
   </div>
   </div>
 
-  <!-- FOOTER section -->
-  <div class="all-footer">
-    <div class="footer">
-      <div class="container">
-        <p>&copy; <?php echo date("Y"); ?> Spencer Bywater, Lowell Burkett, Nikita Bhambhani, Connor Maddox, &amp; Kevin Van of Arizona State University.</p>
-      </div>
-    </div>
-    <div class="footerbar color1">
-      <div class="container color1">
-        <div class="row">
-          <div class="color2 color-sty"></div>
-          <div class="color3 color-sty"></div>
-          <div class="color4 color-sty"></div>
-          <div class="color5 color-sty"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
-</html>
+<?php require 'templates/footer.php'; ?>
