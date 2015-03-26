@@ -6,12 +6,14 @@
 $white: #fff;
 $black: #000;
 $base-black: #222;
-$blue: #00A0B0;
+$blue: #00A0B0; /*Palette "Ocean Five"*/
 $brown: #6A4A3C;
 $red: #CC333F;
 $orange: #EB6841;
 $yellow: #EDC951;
 $ice-blue: lighten($blue, 40%);
+$soft-blue-white: #F3FFFF;
+$soft-blue-shadow: #06737E;
 
 body { 
 	background: $white;
@@ -43,9 +45,13 @@ body {
 	padding-bottom: 0.5rem;
 	h1.fit-title {
 		text-align: center;
-		text-shadow: 0px 0px 10px darken($blue, 5%);
+		//text-shadow: 0px 0px 10px darken($blue, 5%);
 		//letter-spacing: .1px;
 	}
+}
+.fit-title, .fit-title-base {
+	color: $soft-blue-white;
+	text-shadow: 0px 2px 1px $soft-blue-shadow;
 }
 
 /*HEADING*/
@@ -59,7 +65,7 @@ body {
 		font-size: 1.9rem;
 		margin-top: 0.5rem;
 		text-align: left;
-		text-shadow: 0px 0px 10px darken($blue, 5%);
+		//text-shadow: 0px 0px 10px darken($blue, 5%);
 	}
 	a {
 		text-decoration: none;
@@ -122,22 +128,23 @@ body {
 
 /*FOOTER section*/
 .all-footer {
-
+	background-color: darken($white, 10%);
 }
 .footer {
 	min-height: 50px;
-	margin-top: 30px;
+	//margin-top: 30px;
 	bottom: 0px;
 	border-top: 1px dashed lighten($base-black, 50%);
 	color: lighten($base-black, 30%);
 	p {
 		margin-top: 1.2rem;
 		margin-bottom: 1.2rem;
+		text-shadow: 0px 1px 0px $white;
 	}
 }
 @media (min-width: 400px) {
-	.footer {
-		margin-top: 70px;
+	.all-footer {
+		margin-top: 10px;
 	}
 }
 .footerbar {
@@ -183,9 +190,11 @@ body {
 	text-align: left;
 }
 form.symptoms-form {
-
+	margin-bottom: 15px;
 	label {
 		text-align: left;
+		margin-left: .2rem;
+		font-size: 2rem;
 	}
 }
 
@@ -198,3 +207,6 @@ body {
 	flex-direction: column;
 }
 
+.ui-page-theme-a {
+	background-color: $white !important;
+}

@@ -61,7 +61,7 @@
         <div class="four columns"><br></div>
         <div class="four columns navigate">
           <h5>I'm a...</h5>
-          <a href="form.php" class="button button-primary">Patient</a>
+          <a href="form.php" class="button button-primary" style="margin-left: 2px;">Patient</a>
           <br>
           <a href="#" class="button button-primary">Doctor</a>
 

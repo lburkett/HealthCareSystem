@@ -2,6 +2,7 @@
 ------------This is the file that should be edited, not the style.css file.
 */
 /*VARIABLES*/
+/*Palette "Ocean Five"*/
 body {
   background: white; }
 
@@ -25,8 +26,11 @@ body {
   padding-top: 1.5rem;
   padding-bottom: 0.5rem; }
   .heading-landing h1.fit-title {
-    text-align: center;
-    text-shadow: 0px 0px 10px #008997; }
+    text-align: center; }
+
+.fit-title, .fit-title-base {
+  color: #f3ffff;
+  text-shadow: 0px 2px 1px #06737e; }
 
 /*HEADING*/
 .heading {
@@ -38,8 +42,7 @@ body {
   .heading h1.fit-title-base {
     font-size: 1.9rem;
     margin-top: 0.5rem;
-    text-align: left;
-    text-shadow: 0px 0px 10px #008997; }
+    text-align: left; }
   .heading a {
     text-decoration: none;
     color: white; }
@@ -87,19 +90,22 @@ body {
     margin-top: 20px; }
 
 /*FOOTER section*/
+.all-footer {
+  background-color: #e6e6e6; }
+
 .footer {
   min-height: 50px;
-  margin-top: 30px;
   bottom: 0px;
   border-top: 1px dashed #a2a2a2;
   color: #6f6f6f; }
   .footer p {
     margin-top: 1.2rem;
-    margin-bottom: 1.2rem; }
+    margin-bottom: 1.2rem;
+    text-shadow: 0px 1px 0px white; }
 
 @media (min-width: 400px) {
-  .footer {
-    margin-top: 70px; } }
+  .all-footer {
+    margin-top: 10px; } }
 .footerbar {
   background-color: #00a0b0; }
   .footerbar .color-sty {
@@ -132,8 +138,12 @@ body {
 .explanation {
   text-align: left; }
 
-form.symptoms-form label {
-  text-align: left; }
+form.symptoms-form {
+  margin-bottom: 15px; }
+  form.symptoms-form label {
+    text-align: left;
+    margin-left: .2rem;
+    font-size: 2rem; }
 
 /*OTHER styles*/
 body {
@@ -142,3 +152,6 @@ body {
   min-height: 100vh;
   -webkit-flex-direction: column;
   flex-direction: column; }
+
+.ui-page-theme-a {
+  background-color: white !important; }

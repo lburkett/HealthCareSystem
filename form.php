@@ -1,14 +1,20 @@
 <?php require 'templates/meta.php'; ?>
 <!-- Enter any extra code that should go inside the <head> tag here! Do this ONLY if this page needs a script or something that the other pages do not. -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).bind("mobileinit", function () {
+    $.mobile.ajaxEnabled = false;
+});
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-<link rel="stylesheet" href="scripts/jquery.mobile.min.css">
+<link rel="stylesheet" href="scripts/jquery.mobile.readable.css">
 
 <?php require 'templates/header.php'; ?>
   <!-- Any content should go inside the container where indicated -->
   <div class="section content">
     <div class="container">
 		<!-- CONTENT GOES HERE! -->
+		<img src="images/scroll.png" alt="Edmonton Symptom Assessment Form" style="width: 100px; height: 100px; margin-bottom: .5rem; margin-top: 1rem; ">
 		<h3>Symptom Assessment Form</h3>
 		<p>Welcome to the Edmonton Symptom Assessment Form! This system will ask first for some quick information and then for some input related to a few common symptoms. Please answer as accurately as possible.</p>
 		
@@ -23,15 +29,15 @@
 			<div class="row">
 				<div class="four columns">
 					<label for="firstName">First Name</label>
-					<input type="text" class="u-full-width" placeholder="First Name" id="firstName">
+					<input type="text" class="u-full-width" placeholder="First Name" id="firstName" name="firstName">
 				</div>
 				<div class="four columns">
 					<label for="lastName">Last Name</label>
-					<input type="text" class="u-full-width" placeholder="Last Name" id="lastName">
+					<input type="text" class="u-full-width" placeholder="Last Name" id="lastName" name="lastName">
 				</div>
 				<div class="four columns">
 					<label for="phone">Phone Number</label>
-					<input type="text" class="u-full-width" placeholder="Phone Number" id="phone">
+					<input type="text" class="u-full-width" placeholder="Phone Number" id="phone" name="phone">
 				</div>
 			</div>
 
@@ -43,24 +49,24 @@
 			</div>
 			<div class="row">
 				<label for="pain">Pain:</label>
-				<input type="range" name="slider-1" id="pain" min="0" max="10" value="0" data-highlight="true" class="u-full-width">
+				<input type="range" name="pain" id="pain" min="0" max="10" value="0" data-highlight="true" class="u-full-width">
 			</div>
 			<div class="row">
 				<label for="nausea">Nausea:</label>
-					<input type="range" name="slider-1" id="nausea" min="0" max="10" value="0" data-highlight="true" class="u-full-width">
+					<input type="range" name="nausea" id="nausea" min="0" max="10" value="0" data-highlight="true" class="u-full-width">
 			</div>
 			<div class="row">
 				<label for="depression">Depression:</label>
-				<input type="range" name="slider-1" id="depression" min="0" max="10" value="0" data-highlight="true" class="u-full-width">
+				<input type="range" name="depression" id="depression" min="0" max="10" value="0" data-highlight="true" class="u-full-width">
 			</div>
 			<div class="row">
 				<label for="anxiety">Anxiety:</label>
-				<input type="range" name="slider-1" id="anxiety" min="0" max="10" value="0" data-highlight="true" class="u-full-width">
+				<input type="range" name="anxiety" id="anxiety" min="0" max="10" value="0" data-highlight="true" class="u-full-width">
 				
 			</div>
 			<div class="row">
 				<label for="drowsiness">Drowsiness:</label>
-				<input type="range" name="slider-1" id="drowsiness" min="0" max="10" value="0" data-highlight="true" class="u-full-width">
+				<input type="range" name="drowsiness" id="drowsiness" min="0" max="10" value="0" data-highlight="true" class="u-full-width">
 			</div>
 			
 			<hr>
@@ -72,11 +78,11 @@
 			<div class="row">
 				<div class="six columns">
 					<label for="filledOutBy">Filled out by:</label>
-					<input type="text" class="u-full-width" placeholder="Filled out by" id="filledOutBy">
+					<input type="text" class="u-full-width" placeholder="Filled out by" id="filledOutBy" name="filledOutBy" data-role="none">
 				</div>
 				<div class="six columns">
 					<label for="doctorRequested">Doctor Requested:</label>
-					<select class="u-full-width" id="doctorRequested">
+					<select class="u-full-width" id="doctorRequested" data-role="none" name="doctorRequested">
 						<option value="Doctor Van">Doctor Van - Pediatrics</option>
 						<option value="Doctor Bywater">Doctor Bywater - Optometry</option>
 						<option value="Doctor Maddox">Doctor Maddox - Podiatrist</option>
@@ -89,7 +95,7 @@
 			<br>
 			<!-- SUBMIT -->
 			<p>Double check your information and press submit!</p>
-			<input class="button-primary" type="submit" value="Submit" id="submit-button">
+			<input class="button-primary" type="submit" value="Submit" id="submit-button" data-role="none">
 		</form>
 
 
