@@ -6,6 +6,18 @@ $(document).bind("mobileinit", function () {
     $.mobile.ajaxEnabled = false;
 });
 </script>
+<!--<script type="text/javascript">
+	// checks if any fields are empty
+	function isEmpty() {
+		var firstName = document.getElementByID("firstName");
+		var lastName = document.getElementByID("lastName");
+		var phoneNumber = document.getElementByID("phone");
+		var filledOutBy = document.getElementByID("filledOutBy");
+		if(firstName == "" || lastName == "" || phoneNumber == "" || filledOutBy == "") {
+			alert("Fill out blank fields");
+		}
+	}
+</script>-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 <link rel="stylesheet" href="scripts/jquery.mobile.readable.css">
 
@@ -20,7 +32,7 @@ $(document).bind("mobileinit", function () {
 		
 		<hr>
 
-		<form action="" class="symptoms-form">
+		<form action="phpscripts/checkForm.php" class="symptoms-form" method="post">
 			<!-- PERSONAL INFO -->
 			<div class="explanation">
 				<h4>Personal Information</h4>
@@ -95,7 +107,7 @@ $(document).bind("mobileinit", function () {
 			<br>
 			<!-- SUBMIT -->
 			<p>Double check your information and press submit!</p>
-			<input class="button-primary" type="submit" value="Submit" id="submit-button" data-role="none">
+			<input class="button-primary" type="submit" value="Submit" id="submit-button" data-role="none" onclick="isEmpty()">
 		</form>
 
 
