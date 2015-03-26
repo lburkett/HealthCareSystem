@@ -14,7 +14,7 @@ $(document).bind("mobileinit", function () {
   <div class="section content">
     <div class="container">
 		<!-- CONTENT GOES HERE! -->
-		<img src="images/scroll.png" alt="Edmonton Symptom Assessment Form" style="width: 100px; height: 100px; margin-bottom: .5rem; margin-top: 1rem; ">
+		<img src="images/scroll.png" alt="Edmonton Symptom Assessment Form" style="width: 100px; height: 100px; margin-bottom: 1.0rem; margin-top: 1rem; ">
 		<h3>Symptom Assessment Form</h3>
 		<p>Welcome to the Edmonton Symptom Assessment Form! This system will ask first for some quick information and then for some input related to a few common symptoms. Please answer as accurately as possible.</p>
 		
