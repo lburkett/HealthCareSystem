@@ -87,17 +87,17 @@
 
 		// Other functions
 		public function __toString() {
-			echo $this->getFirstName() . "<br>";
-			echo $this->getLastName() . "<br>";
-			echo $this->getPhoneNumber() . "<br>";
-			echo $this->getFilled() . "<br>";
-			echo $this->getDoctor() . "<br>";
-			echo $this->getPain() . "<br>";
-			echo $this->getNausea() . "<br>";
-			echo $this->getDepression() . "<br>";
-			echo $this->getAnxiety() . "<br>";
-			echo $this->getDrowsiness() . "<br>";
-			echo $this->getAverage() . "<br>";
+			echo "First Name: " . $this->getFirstName() . "<br>";
+			echo "Last Name: " . $this->getLastName() . "<br>";
+			echo "Phone Number: " . $this->getPhoneNumber() . "<br>";
+			echo "Filled Out By: " . $this->getFilled() . "<br>";
+			echo "For Doctor: " . $this->getDoctor() . "<br>";
+			echo "Pain: " . $this->getPain() . "<br>";
+			echo "Nausea: " . $this->getNausea() . "<br>";
+			echo "Depression: " . $this->getDepression() . "<br>";
+			echo "Anxiety: " . $this->getAnxiety() . "<br>";
+			echo "Drowsiness: " . $this->getDrowsiness() . "<br>";
+			echo "Average: " . $this->getAverage() . "<br>";
 		}	
 	}
 
