@@ -7,23 +7,40 @@ $(document).bind("mobileinit", function () {
     $.mobile.ajaxEnabled = false;
 });
 </script>
-<!--<script type="text/javascript">
-	// checks if any fields are empty
-	function isEmpty() {
-		var firstName = document.getElementByID("firstName");
-		var lastName = document.getElementByID("lastName");
-		var phoneNumber = document.getElementByID("phone");
-		var filledOutBy = document.getElementByID("filledOutBy");
-		if(firstName === "" || lastName === "" || phoneNumber === "" || filledOutBy === "") {
-			alert("Fill out blank fields");
-		}
-	}
-</script>-->
+<script src="scripts/happy.js"></script>
+<script type="text/javascript">
+//Using the happy.js plugin for quick and easy form validation
+	var happy = {
+    notDoneYet: function () {
+    	alert("Please complete blank fields.");
+    	return false;
+	    }
+	};
+	$(document).ready(function () {
+        $('.symptoms-form').isHappy({
+          fields: {
+            '#firstName': {
+              required: true,
+            },
+            '#lastName': {
+              required: true,
+            },
+            '#phone': {
+              required: true,
+            },
+            '#filledOutBy': {
+            	required: true,
+            }
+          },
+          unHappy: happy.notDoneYet
+        });
+      });
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 <link rel="stylesheet" href="scripts/jquery.mobile.min.css">
-
 <?php require 'templates/header.php'; ?>
   <!-- Any content should go inside the container where indicated -->
+  
   <div class="section content">
     <div class="container">
 		<!-- CONTENT GOES HERE! -->
@@ -96,7 +113,7 @@ $(document).bind("mobileinit", function () {
 				<div class="six columns">
 					<label for="doctorRequested">Doctor Requested:</label>
 					<select class="u-full-width" id="doctorRequested" data-role="none" name="doctorRequested">
-						<option value="">N/A</option>
+						<option value="">Any</option>
 						<option value="Doctor Van">Doctor Van - Pediatrics</option>
 						<option value="Doctor Bywater">Doctor Bywater - Optometry</option>
 						<option value="Doctor Maddox">Doctor Maddox - Podiatrist</option>
