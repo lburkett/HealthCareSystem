@@ -8,7 +8,6 @@
       <!-- CONTENT GOES HERE! -->
       Write things here, do php wizardy.
 
-
     </div>
   </div>
 

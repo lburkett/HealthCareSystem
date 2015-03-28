@@ -19,4 +19,5 @@
 
 	// Prints out new patient information
 	$newPatient->__toString();
+
 ?>
