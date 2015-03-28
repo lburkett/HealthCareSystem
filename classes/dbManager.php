@@ -5,10 +5,17 @@
 		/* Initialize new database file */
         
         //create new database
-         protected $db = new PDO('sqlite:patientDb_PDO.sqlite');
-        
+         protected $db; 
         //entries
-        protected $sql="CREATE TABLE Patients(
+        protected $sql;
+        //
+        protected $resolved;
+  
+        
+		//constructor
+        public function __construct(){
+            $db = = new PDO('sqlite:patientDb_PDO.sqlite');
+            $sql = "CREATE TABLE Patients(
                 id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
                 fname VARCHAR NOT NULL,
                 lname VARCHAR NOT NULL,
@@ -25,11 +32,10 @@
                 average REAL NOT NULL,
 
                 resolved INTEGER NOT NULL /* 0 - FALSE, 1 - TRUE */)";
-                
-                protected $resolved=0;
-  
+            resolved = 0;
+        }
         
-		/* Receives Patient object then inserts it into the database */
+        /* Receives Patient object then inserts it into the database */
 		public function addPatient($newPatient) {
             newPatient = new Patient;
                 $fname = $newPatient->setFirstName($_POST['firstName']);
@@ -65,6 +71,7 @@
 			return $patient;
 		}
 		/* Marks the patient id entered as resolved */
+        
         //needs data from doctor class i presume
 		public function resolvePatient($id) {
             
