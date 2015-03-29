@@ -1,6 +1,6 @@
 <?php
-	//require '../classes/patient.php';
-    require '../classes/dbManager.php'; 
+	require_once '../classes/patient.php';
+    require_once '../classes/dbManager.php'; 
 
 	$newPatient = new Patient;
     $manager = new DatabaseManager;
@@ -18,17 +18,18 @@
 	$newPatient->setAnxiety($_POST['anxiety']);
 	$newPatient->setDrowsiness($_POST['drowsiness']);
 	$newPatient->calculateAverage();
+	$newPatient->setResolved(0);
 
 	// Prints out new patient information
 	$newPatient->__toString();
     
+    // Inserts a patient and tests a query
     $manager->addPatient($newPatient);
-    $newPatient=$manager->retrievePatient();
+    $newPatient = $manager->retrievePatient();
     
-    while($row = $newPatient->fetch(PDO::FETCH_ASSOC))
-    {   
-        echo $row['fname'];
-        echo $row['lname'];
+    // Prints out the fname and lname column for each patient in the database
+    while($row = $newPatient->fetch(PDO::FETCH_ASSOC)) {   
+        echo $row['fname'] . " ";
+        echo $row['lname'] . "<br>";
     }
-
 ?>
