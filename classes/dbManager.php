@@ -37,7 +37,7 @@
         
         /* Receives Patient object then inserts it into the database */
 		public function addPatient($newPatient) {
-            newPatient = new Patient;
+                newPatient = new Patient;
                 $fname = $newPatient->setFirstName($_POST['firstName']);
 	           $lname = $newPatient->setLastName($_POST['lastName']);
 	           $phone = $newPatient->setPhoneNumber($_POST['phone']);

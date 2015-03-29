@@ -29,3 +29,13 @@ CREATE TABLE doctor (
     email VARCHAR NOT NULL,
     password VARCHAR NOT NULL,
 );
+
+// Initialize the Database with doctors. 
+
+INSERT INTO doctor (fname, lname) VALUES ('Dr. Bywater', 'Podiatrist');".
+               "INSERT INTO doctors (fname, lname) VALUES ('Dr. Bhambhani', 'Sports Medicine'); " .
+               "INSERT INTO doctors (fname, lname) VALUES ('Dr. Burkett', 'Optometry'); " .
+               "INSERT INTO doctors (fname, lname) VALUES ('Dr. Maddox', 'Pharmacy'); " .
+               "INSERT INTO doctors (fname, lname) VALUES ('Dr. Van', 'Pediatric');");
+
+        
