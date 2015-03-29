@@ -1,4 +1,3 @@
-
 <?php
   try
   { // Still currently testing <---------------------

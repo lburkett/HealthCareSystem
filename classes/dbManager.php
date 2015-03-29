@@ -1,6 +1,6 @@
 <?php
 	require_once 'patient.php';
-    require_once '../data/common.php'; 
+    require_once '../phpscripts/common.php'; 
 
     class DatabaseManager {
         protected $db; 
