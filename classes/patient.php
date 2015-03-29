@@ -2,11 +2,11 @@
 	class Patient {
 		/* Information */
 		protected $id;
-		protected $firstName;
-		protected $lastName;
-		protected $phoneNumber;
-		protected $filled;
-		protected $doctor;
+		protected $fname;
+		protected $lname;
+		protected $phone;
+		protected $filledOutBy;
+		protected $doctorRequested;
 		/* Symptoms */
 		protected $pain;
 		protected $nausea;
@@ -14,25 +14,26 @@
 		protected $anxiety;
 		protected $drowsiness;
 		protected $average;
+		protected $resolved;
 
 		/* Set variable functions */
 		public function setID($newVar) {
 			$this->id = $newVar;
 		}
 		public function setFirstName($newVar) {
-			$this->firstName = $newVar;
+			$this->fname = $newVar;
 		}
 		public function setLastName($newVar) {
-			$this->lastName = $newVar;
+			$this->lname = $newVar;
 		}
 		public function setPhoneNumber($newVar) {
-			$this->phoneNumber = $newVar;
+			$this->phone = $newVar;
 		}
 		public function setFilled($newVar) {
-			$this->filled = $newVar;
+			$this->filledOutBy = $newVar;
 		}
 		public function setDoctor($newVar) {
-			$this->doctor = $newVar;
+			$this->doctorRequested = $newVar;
 		}
 		public function setPain($newVar) {
 			$this->pain = $newVar;
@@ -52,25 +53,28 @@
 		public function calculateAverage() {
 			$this->average = ($this->pain + $this->nausea + $this->depression + $this->anxiety + $this->drowsiness) / 2;
 		}
+		public function setResolved($newVar) {
+			$this->resolved = $newVar;
+		}
 
 		/* Get variable functions */
 		public function getID() {
 			return $this->id;
 		}
 		public function getFirstName() {
-			return $this->firstName;
+			return $this->fname;
 		}
 		public function getLastName() {
-			return $this->lastName;
+			return $this->lname;
 		}
 		public function getPhoneNumber() {
-			return $this->phoneNumber;
+			return $this->phone;
 		}
 		public function getFilled() {
-			return $this->filled;
+			return $this->filledOutBy;
 		}
 		public function getDoctor() {
-			return $this->doctor;
+			return $this->doctorRequested;
 		}
 		public function getPain() {
 			return $this->pain;
@@ -90,6 +94,9 @@
 		public function getAverage() {
 			return $this->average;
 		}
+		public function getResolved() {
+			return $this->resolved;
+		}
 
 		/* Prints out all viariables */
 		public function __toString() {
@@ -104,6 +111,7 @@
 			echo "Anxiety: " . $this->getAnxiety() . "<br>";
 			echo "Drowsiness: " . $this->getDrowsiness() . "<br>";
 			echo "Average: " . $this->getAverage() . "<br>";
+			echo "Resolved: " . $this->getResolved() . "<br>";
 		}	
 	}
 ?>

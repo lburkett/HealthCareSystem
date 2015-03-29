@@ -15,7 +15,7 @@ CREATE TABLE patient (
     anxiety INTEGER NOT NULL,
     drowsiness INTEGER NOT NULL,
     average REAL NOT NULL,
-    resolved INTEGER NOT NULL /* 0 - FALSE, 1 - TRUE*/
+    resolved INTEGER NOT NULL /* 0 - FALSE, 1 - TRUE */
 );
 
 DROP TABLE IF EXISTS doctor;
