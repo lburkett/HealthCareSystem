@@ -14,7 +14,7 @@
         
 		//constructor
         public function __construct(){
-            $db = = new PDO('sqlite:patientDb_PDO.sqlite');
+            $db =  new PDO('sqlite:patientDb_PDO.sqlite');
             $sql = "CREATE TABLE Patients(
                 id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
                 fname VARCHAR NOT NULL,
@@ -32,33 +32,21 @@
                 average REAL NOT NULL,
 
                 resolved INTEGER NOT NULL /* 0 - FALSE, 1 - TRUE */)";
-            resolved = 0;
+            $resolved = 0;
         }
         
         /* Receives Patient object then inserts it into the database */
 		public function addPatient($newPatient) {
-                newPatient = new Patient;
-                $fname = $newPatient->setFirstName($_POST['firstName']);
-	           $lname = $newPatient->setLastName($_POST['lastName']);
-	           $phone = $newPatient->setPhoneNumber($_POST['phone']);
-	           $filledBy = $newPatient->setFilled($_POST['filledOutBy']);
-	           $doctorRequested = $newPatient->setDoctor($_POST['doctorRequested']);
-
-	           $pain = $newPatient->setPain($_POST['pain']);
-	           $nausea = $newPatient->setNausea($_POST['nausea']);
-	           $depression = $newPatient->setDepression($_POST['depression']);
-	           $anxiety = $newPatient->setAnxiety($_POST['anxiety']);
-	           $drowsiness = $newPatient->setDrowsiness($_POST['drowsiness']);
-	           $average = $newPatient->calculateAverage();
+                
                
                $db->exec("INSERT INTO patients(fname, lname, phone, filledOutBy, 
                                                 doctorRequested, pain, nausea, 
                                                 depression, anxiety, drowsiness, 
                                                 average, resolved 
-                                               VALUES ($fname, $lname, $phone, $filledBy, 
-                                               $doctorRequested, $pain, $nausea, 
-                                               $depression, $anxiety, $drowsiness, 
-                                               $average, $resolved) )";
+                                               VALUES ($newPatient->getPatient(), $newPatient->getLastName(), $newPatient->getPhoneNumber(),
+                                               $newPatient->getFilled(), $newPatient->getDoctor(), $newPatient->getPain(), $newPatient->getNausea(), 
+                                               $newPatient->getDepression(), $newPatient->getAnxiety(), $newPatient->getDrowsiness(), 
+                                               $newPatient->getAverage(), $resolved) )";
 		}
 		/* Queries the database for a specific doctor name and returns all patient information */
 		public function retrievePatient($doctor) {
