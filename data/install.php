@@ -53,7 +53,7 @@ function installBlog()
     // See how many rows we created, if any
     $count = array();
 
-    foreach(array('post', 'comment') as $tableName)
+    foreach(array('patient', 'doctor') as $tableName)
     {
         if (!$error)
         {
@@ -130,7 +130,7 @@ if ($_SESSION)
                 <div class="success box">
                     The database and demo data was created OK.
 
-                    <?php foreach (array('post', 'comment') as $tableName): ?>
+                    <?php foreach (array('patient', 'doctor') as $tableName): ?>
                         <?php if (isset($count[$tableName])): ?>
                             <?php // Prints the count ?>
                             <?php echo $count[$tableName] ?> new

@@ -8,16 +8,13 @@ CREATE TABLE patient (
     lname VARCHAR NOT NULL,
     phone VARCHAR NOT NULL,
     filledOutBy VARCHAR NOT NULL,
-    doctorRequested VARCHAR, 
-
-    /* SYMPTOMS */
+    doctorRequested VARCHAR,
     pain INTEGER NOT NULL,
     nausea INTEGER NOT NULL,
     depression INTEGER NOT NULL,
     anxiety INTEGER NOT NULL,
     drowsiness INTEGER NOT NULL,
     average REAL NOT NULL,
-
     resolved INTEGER NOT NULL /* 0 - FALSE, 1 - TRUE */
 );
 
@@ -30,12 +27,10 @@ CREATE TABLE doctor (
     password VARCHAR NOT NULL,
 );
 
-// Initialize the Database with doctors. 
-
-INSERT INTO doctor (fname, lname) VALUES ('Dr. Bywater', 'Podiatrist');".
-               "INSERT INTO doctors (fname, lname) VALUES ('Dr. Bhambhani', 'Sports Medicine'); " .
-               "INSERT INTO doctors (fname, lname) VALUES ('Dr. Burkett', 'Optometry'); " .
-               "INSERT INTO doctors (fname, lname) VALUES ('Dr. Maddox', 'Pharmacy'); " .
-               "INSERT INTO doctors (fname, lname) VALUES ('Dr. Van', 'Pediatric');");
-
-        
+/* initialize database
+INSERT INTO doctor (fname, lname) VALUES ('Dr. Bywater', 'Podiatrist');
+INSERT INTO doctor (fname, lname) VALUES ('Dr. Bhambhani', 'Sports Medicine');
+INSERT INTO doctor (fname, lname) VALUES ('Dr. Burkett', 'Optometry');
+INSERT INTO doctor (fname, lname) VALUES ('Dr. Maddox', 'Pharmacy');
+INSERT INTO doctor (fname, lname) VALUES ('Dr. Van', 'Pediatric');
+*/
