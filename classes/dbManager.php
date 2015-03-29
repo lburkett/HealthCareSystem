@@ -46,7 +46,7 @@
                                                VALUES ($newPatient->getPatient(), $newPatient->getLastName(), $newPatient->getPhoneNumber(),
                                                $newPatient->getFilled(), $newPatient->getDoctor(), $newPatient->getPain(), $newPatient->getNausea(), 
                                                $newPatient->getDepression(), $newPatient->getAnxiety(), $newPatient->getDrowsiness(), 
-                                               $newPatient->getAverage(), $resolved) )";
+                                               $newPatient->getAverage(), $resolved); ";
 		}
 		/* Queries the database for a specific doctor name and returns all patient information */
 		public function retrievePatient($doctor) {
