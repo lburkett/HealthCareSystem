@@ -1,7 +1,9 @@
 <?php
-	require '../classes/patient.php';
+	//require '../classes/patient.php';
+    require '../classes/dbManager.php'; 
 
 	$newPatient = new Patient;
+    $manager = new DatabaseManager;
 
 	// Sets new patient information
 	$newPatient->setFirstName($_POST['firstName']);
@@ -19,5 +21,14 @@
 
 	// Prints out new patient information
 	$newPatient->__toString();
+    
+    $manager->addPatient($newPatient);
+    $newPatient=$manager->retrievePatient();
+    
+    while($row = $newPatient->fetch(PDO::FETCH_ASSOC))
+    {   
+        echo $row['fname'];
+        echo $row['lname'];
+    }
 
 ?>
