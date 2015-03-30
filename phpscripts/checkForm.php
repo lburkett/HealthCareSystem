@@ -32,4 +32,5 @@
         echo $row['fname'] . " ";
         echo $row['lname'] . "<br>";
     }
+    
 ?>
