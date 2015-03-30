@@ -1,7 +1,7 @@
 <h4>Form Data inserted:</h4>
 <?php
 	require_once '../classes/patient.php';
-    require_once '../classes/dbManager.php'; 
+    require_once '../classes/dbManager.php';
 
 	$newPatient = new Patient;
     $manager = new DatabaseManager;
@@ -42,4 +42,6 @@
 		echo $row['drowsiness'] . " Average: " . $row['average'] . " Resolved: " . $row['resolved'];
 		echo "<br>";    
     }
+    echo "<hr>";
+    echo "<a href=\"../index.php" . "\">Return to home</a>";
 ?>

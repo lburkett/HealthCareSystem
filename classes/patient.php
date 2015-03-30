@@ -51,7 +51,7 @@
 			$this->drowsiness = $newVar;
 		}
 		public function calculateAverage() {
-			$this->average = ($this->pain + $this->nausea + $this->depression + $this->anxiety + $this->drowsiness) / 2;
+			$this->average = ($this->pain + $this->nausea + $this->depression + $this->anxiety + $this->drowsiness) / 5;
 		}
 		public function setResolved($newVar) {
 			$this->resolved = $newVar;
