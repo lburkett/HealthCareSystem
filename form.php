@@ -1,3 +1,6 @@
+<?php 
+	require_once 'phpscripts/common.php';
+	require_once 'classes/dbManager.php'; ?>
 <?php require 'templates/meta.php'; ?>
 <!-- Enter any extra code that should go inside the <head> tag here! Do this ONLY if this page needs a script or something that the other pages do not. -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
@@ -113,12 +116,28 @@ $(document).bind("mobileinit", function () {
 				<div class="six columns">
 					<label for="doctorRequested">Doctor Requested:</label>
 					<select class="u-full-width" id="doctorRequested" data-role="none" name="doctorRequested">
-						<option value="">Any</option>
+						<option value="Any">Any</option>
+						<?php 
+						
+							// Get all doctors from the database and output them here
+							$manager = new DatabaseManager;
+							$doctorList = $manager->getDoctorList();
+
+							// Loop through results and output them as HTML option tags
+							while ($row = $doctorList->fetch(PDO::FETCH_ASSOC)) {
+								echo "<option value=\"" . $row['fname'] . "\">";	//Opening tag
+								echo $row['fname'] . " - " . $row['lname']; 	//Name and profession
+								echo "</option>";
+							}
+							
+						 ?>
+						 <!--
 						<option value="Doctor Van">Doctor Van - Pediatrics</option>
 						<option value="Doctor Bywater">Doctor Bywater - Optometry</option>
 						<option value="Doctor Maddox">Doctor Maddox - Podiatrist</option>
 						<option value="Doctor Burkett">Doctor Burkett - Sports medicine</option>
-						<option value="Doctor Bhambhani">Doctor Bhambhani - Cardiology</option>
+						<option value="Doctor Bhambhani">Doctor Bhambhani - Cardiology</option> -->
+						
 					</select>
 				</div>
 			</div>

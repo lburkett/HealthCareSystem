@@ -1,6 +1,5 @@
 <?php
-	require_once 'patient.php';
-    require_once '../phpscripts/common.php'; 
+	  require_once 'patient.php';
 
     class DatabaseManager {
         protected $db; 
@@ -58,13 +57,20 @@
             // Execute the prepared statement
             $stmt->execute();
 		}
+
 		/* Queries the database for a specific doctor name and returns all patient information */
 		public function retrievePatient() {
 			return $this->db->query("SELECT * FROM patient");
 		}
+
 		/* Marks the patient id entered as resolved */
 		public function resolvePatient($id) {
             
 		}
+
+    // Queries the database for a list of all doctors
+    public function getDoctorList() {
+      return $this->db->query("SELECT * FROM doctor");
+    }
 	}
 ?>

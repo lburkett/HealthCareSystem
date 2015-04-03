@@ -1,5 +1,6 @@
 <h4>Form Data inserted:</h4>
 <?php
+	require_once 'common.php';
 	require_once '../classes/patient.php';
     require_once '../classes/dbManager.php';
 
