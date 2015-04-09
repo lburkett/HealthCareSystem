@@ -6,7 +6,9 @@
   <div class="section content">
     <div class="container">
       <!-- CONTENT GOES HERE! -->
-      	<div class="u-pull-right"><button disabled>Logout</button></div><br>
+      	<div class="row">
+          <div class="u-pull-right"><button disabled>Logout</button></div>
+        </div>
         <div class="section">
             <h3>Welcome, Doctor <!--name goes here --> </h3>
             <hr>
