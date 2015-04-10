@@ -16,6 +16,13 @@
 		protected $average;
 		protected $resolved;
 
+		public function __construct() {
+			$this->pain = 0;
+			$this->nausea = 0;
+			$this->depression = 0;
+			$this->anxiety = 0;
+			$this->drowsiness = 0;
+		}
 		/* Set variable functions */
 		public function setID($newVar) {
 			$this->id = $newVar;
