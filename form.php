@@ -125,18 +125,12 @@ $(document).bind("mobileinit", function () {
 
 							// Loop through results and output them as HTML option tags
 							while ($row = $doctorList->fetch(PDO::FETCH_ASSOC)) {
-								echo "<option value=\"" . $row['fname'] . "\">";	//Opening tag
-								echo $row['fname'] . " - " . $row['lname']; 	//Name and profession
+								echo "<option value=\"" . $row['name'] . "\">";	//Opening tag
+								echo $row['name'] . " - " . $row['profession']; 	//Name and profession
 								echo "</option>";
 							}
 							
 						 ?>
-						 <!--
-						<option value="Doctor Van">Doctor Van - Pediatrics</option>
-						<option value="Doctor Bywater">Doctor Bywater - Optometry</option>
-						<option value="Doctor Maddox">Doctor Maddox - Podiatrist</option>
-						<option value="Doctor Burkett">Doctor Burkett - Sports medicine</option>
-						<option value="Doctor Bhambhani">Doctor Bhambhani - Cardiology</option> -->
 						
 					</select>
 				</div>

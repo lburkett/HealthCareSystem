@@ -5,14 +5,14 @@
     $db = new PDO('sqlite:doctorsDb_PDO.sqlite');
 
     //create the database
-    $db->exec("CREATE TABLE doctors (Id INTEGER PRIMARY KEY, fname TEXT, lname TEXT)");    
+    $db->exec("CREATE TABLE doctors (Id INTEGER PRIMARY KEY, name TEXT, profession TEXT)");    
 
     //insert some data...
-    $db->exec("INSERT INTO doctors (fname, lname) VALUES ('Dr. Bywater', 'Podiatrist');".
-               "INSERT INTO doctors (fname, lname) VALUES ('Dr. Bhambhani', 'Sports Medicine'); " .
-               "INSERT INTO doctors (fname, lname) VALUES ('Dr. Burkett', 'Optometry'); " .
-               "INSERT INTO doctors (fname, lname) VALUES ('Dr. Maddox', 'Pharmacy'); " .
-               "INSERT INTO doctors (fname, lname) VALUES ('Dr. Van', 'Pediatric');");
+    $db->exec("INSERT INTO doctors (name, profession) VALUES ('Dr. Bywater', 'Podiatrist');".
+               "INSERT INTO doctors (name, profession) VALUES ('Dr. Bhambhani', 'Sports Medicine'); " .
+               "INSERT INTO doctors (name, profession) VALUES ('Dr. Burkett', 'Optometry'); " .
+               "INSERT INTO doctors (name, profession) VALUES ('Dr. Maddox', 'Pharmacy'); " .
+               "INSERT INTO doctors (name, profession) VALUES ('Dr. Van', 'Pediatric');");
 
     //now output the data to a simple html table...
     print "<table border=1>";
@@ -21,8 +21,8 @@
     foreach($result as $row)
     {
       print "<tr><td>".$row['Id']."</td>";
-      print "<td>".$row['fname']."</td>";
-      print "<td>".$row['lname']."</td></tr>";
+      print "<td>".$row['name']."</td>";
+      print "<td>".$row['profession']."</td></tr>";
     }
     print "</table>";
 
