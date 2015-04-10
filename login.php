@@ -1,11 +1,10 @@
 <?php
   require 'templates/meta.php';
   require_once 'phpscripts/authenticate.php';
+  session_start();
 
   $username = '';
   if ($_POST) {
-    session_start();
-
     $username = $_POST['userName'];
     $success = loginAttempt($username, $_POST['password']);
 
@@ -13,7 +12,7 @@
       $name = nameLookup($username);
       login($username, $name);
 
-      redirectAndExit('doctorHome.php');
+      header('Location: doctorHome.php');
     }
   }
 ?>

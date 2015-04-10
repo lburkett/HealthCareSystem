@@ -44,7 +44,7 @@
 							   WHERE
 							   		email = :username");
 
-		$stmt->bindParam(':name', $username);
+		$stmt->bindParam(':username', $username);
 		$username = $usernameToLookup;
 
 		$stmt->execute();
