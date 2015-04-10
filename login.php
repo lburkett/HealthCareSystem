@@ -1,4 +1,22 @@
-<?php require 'templates/meta.php'; ?>
+<?php
+  require 'templates/meta.php';
+  require_once 'phpscripts/authenticate.php';
+
+  $username = '';
+  if ($_POST) {
+    session_start();
+
+    $username = $_POST['userName'];
+    $success = loginAttempt($username, $_POST['password']);
+
+    if ($success) {
+      $name = nameLookup($username);
+      login($username, $name);
+
+      redirectAndExit('doctorHome.php');
+    }
+  }
+?>
 <!-- Enter any extra code that should go inside the <head> tag here! Do this ONLY if this page needs a script or something that the other pages do not. -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script type="text/javascript">
@@ -39,14 +57,21 @@ $(document).bind("mobileinit", function () {
       <!-- Write things here, do php wizardy. -->
         
         <div class="section">
+
         <h3>Doctor Login</h3>
+            <?php // Just temporary, perhaps replace with a better system to check for this stuff? ?>
             <hr>
+            <?php if ($username): ?>
+                <div style="border: 1px solid #ff6666; padding: 6px;">
+                  The username or password is incorrect, try again.
+                </div>
+            <?php endif ?> 
             <!--<form  class="login" method="post">-->
             <!-- username textbox -->
             <div class="row">
-              <div class="four columns"><br></div>  
+              <div class="four columns"><br></div> 
 				<div class="four columns">
-					<form action="doctorHome.php" class="login-form" method="post">
+					<form class="login-form" method="post">
 						<label for="userName">Username</label>
 						<input type="text" class="u-full-width" placeholder="Username" id="userName" name="userName">
 						
