@@ -43,19 +43,24 @@
 			$this->doctorRequested = $newVar;
 		}
 		public function setPain($newVar) {
-			$this->pain = $newVar;
+			$symp = $this->symptomValidation($newVar);
+			$this->pain = $symp;
 		}
 		public function setNausea($newVar) {
-			$this->nausea = $newVar;
+			$symp = $this->symptomValidation($newVar);
+			$this->nausea = $symp;
 		}
 		public function setDepression($newVar) {
-			$this->depression = $newVar;
+			$symp = $this->symptomValidation($newVar);
+			$this->depression = $symp;
 		}
 		public function setAnxiety($newVar) {
-			$this->anxiety = $newVar;
+			$symp = $this->symptomValidation($newVar);
+			$this->anxiety = $symp;
 		}
 		public function setDrowsiness($newVar) {
-			$this->drowsiness = $newVar;
+			$symp = $this->symptomValidation($newVar);
+			$this->drowsiness = $symp;
 		}
 		public function calculateAverage() {
 			$this->average = ($this->pain + $this->nausea + $this->depression + $this->anxiety + $this->drowsiness) / 5;
@@ -120,5 +125,19 @@
 			echo "Average: " . $this->getAverage() . "<br>";
 			echo "Resolved: " . $this->getResolved() . "<br>";
 		}	
+		
+		public function symptomValidation($newVar) {
+			if($newVar < 0) {
+				$newVar = 0;
+				return $newVar;
+			}
+			else if($newVar > 10) {
+				$newVar = 10;
+				return $newVar;
+			}
+			else {
+				return $newVar;
+			}
+		}
 	}
 ?>
