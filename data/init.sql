@@ -4,8 +4,8 @@
 DROP TABLE IF EXISTS patient;
 CREATE TABLE patient (
     id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    name VARCHAR NOT NULL,
-    profession VARCHAR NOT NULL,
+    fname VARCHAR NOT NULL,
+    lname VARCHAR NOT NULL,
     phone VARCHAR NOT NULL,
     filledOutBy VARCHAR NOT NULL,
     doctorRequested VARCHAR,
