@@ -1,5 +1,5 @@
 <?php
-	  require_once 'patient.php';
+	require_once 'patient.php';
 
     class DatabaseManager {
         protected $db; 
@@ -60,7 +60,10 @@
 
 		/* Queries the database for a specific doctor name and returns all patient information */
 		public function retrievePatient() {
-			return $this->db->query("SELECT * FROM patient");
+			return $this->db->query("SELECT
+                                        *
+                                     FROM
+                                        patient");
 		}
 
 		/* Marks the patient id entered as resolved */
@@ -68,9 +71,12 @@
             
 		}
 
-    // Queries the database for a list of all doctors
-    public function getDoctorList() {
-      return $this->db->query("SELECT * FROM doctor");
-    }
+        // Queries the database for a list of all doctors
+        public function getDoctorList() {
+            return $this->db->query("SELECT
+                                        *
+                                     FROM
+                                        doctor");
+        }
 	}
 ?>
