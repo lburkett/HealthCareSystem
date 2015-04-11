@@ -19,7 +19,7 @@
         }
 	/* Queries the database for a specific doctor name and returns all patient information */
 	public function retrieveNotification($Doc) {
-	return $this->db->query("SELECT * FROM patient WHERE doctorRequested = '".$Doc."'");
+	return $this->db->query("SELECT * FROM patient WHERE doctorRequested = '".$Doc."' OR doctorRequested = 'Any'");
 		}
 	/* Marks the patient id entered as resolved */
 	public function resolvePatient($doc, $p) {

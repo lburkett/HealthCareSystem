@@ -1,7 +1,7 @@
 <?php
 	  require_once 'patient.php';
 	  require_once 'dbManager.php';
-   	class unResolvedManager {
+   	class patientHistoryManager {
         protected $db; 
         
         /* Connect to database file */
@@ -17,9 +17,9 @@
         public function __destruct() {
             $this->db = NULL;
         }
-	    /* Queries the database and returns all unresolved patient information */
-        public function retrieveUnresolved() {
-        return $this->db->query("SELECT * FROM patient WHERE resolved = 0");
+	    /* Queries the database and returns all patient information */
+        public function retrieveHistory() {
+        return $this->db->query("SELECT * FROM patient");
         }
         /* Marks the patient id entered as resolved */
         public function resolvePatient($doc, $p) {
