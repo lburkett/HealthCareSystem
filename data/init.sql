@@ -28,7 +28,7 @@ CREATE TABLE doctor (
 );
 
 /*initialize database*/
-INSERT INTO doctor (name, profession, email, password) VALUES ('Dr. Bywater', 'Podiatrist', '', '');
+INSERT INTO doctor (name, profession, email, password) VALUES ('Dr. Bywater', 'Podiatrist', 'bywatch', 'asdf');
 INSERT INTO doctor (name, profession, email, password) VALUES ('Dr. Bhambhani', 'Sports Medicine', '', '');
 INSERT INTO doctor (name, profession, email, password) VALUES ('Dr. Burkett', 'Optometry', 'laburket@asu.edu', 'password');
 INSERT INTO doctor (name, profession, email, password) VALUES ('Dr. Maddox', 'Pharmacy', '', '');

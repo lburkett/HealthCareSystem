@@ -210,3 +210,118 @@ body {
 .ui-page-theme-a {
 	background-color: $white !important;
 }
+
+/*-------------------------
+  DOCTOR INTERFACE STYLES
+-------------------------*/
+
+/*NOTIFICATIONS page */
+$base-color: $base-black;//#93C1C3;
+$title-bg: lighten($base-color, 52%);
+$borderclr: lighten($base-color, 50%);
+$lighter-bg: lighten($title-bg, 32%);
+$expander-color: #087BB8;
+.patient-info {
+	border: 1px solid $borderclr;
+	background-color: $title-bg;
+	color: $white;
+	border-radius: 3px;
+	padding-top: 1rem;
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	box-shadow: inset 0 1px 0 lighten($title-bg, 12%);
+	.phone-num {text-align: center !important;}
+	.info-cont {padding-bottom: .5rem;}
+	.avg {
+		.symptoms-title {
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 1.2rem;
+			color: lighten($base-black, 5%);
+			padding-right: .5rem;
+		}
+	}
+	.patient-name {
+		font-size: 2.0rem;
+		vertical-align: center;
+		text-align: left;
+		text-shadow: 0 -1px 0 darken($title-bg, 10%);
+		a.close-expand {
+			vertical-align: middle;
+			margin-left: 1rem;
+			margin-right: 1rem;
+			padding: 0 .7rem;
+			background-color: $expander-color;
+			border-radius: 2px;
+			color: $white;
+			text-decoration: none;
+			text-shadow: none;
+			cursor: pointer;
+			box-shadow: inset 0px 1px 0 lighten($expander-color, 7%);
+			border: 1px solid darken($expander-color, 5%);
+		}
+		a.close-expand:hover {
+			background-color: lighten($expander-color, 2%);
+		}
+	}
+	@media (min-width: 400px) {
+		.doctor-name {
+			text-align: left;
+		}
+	}
+	.doctor-name {
+		font-size: 1.5rem;
+		font-style: italic;
+		padding-top: .5rem;
+		color: darken($white, 4%);
+		text-shadow: 0 -1px 0 darken($lighter-bg, 20%);
+	}
+	.patient-details {
+		border-top: 1px dashed $borderclr;
+		background-color: $lighter-bg;
+		color: $base-black;
+		padding-top: 1rem;
+		padding-bottom: .5rem;
+		display: none;
+		.symptoms-title {
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 1.2rem;
+			color: lighten($base-black, 5%);
+		}
+		@media (min-width: 400px) {
+			.mobile-no {
+				display: block !important;
+				border-right: 1px dotted $title-bg;
+			}
+		}
+		.mobile-no {
+			display: none;
+		}
+	}
+	input[type="button"] {
+		margin-bottom: 0;
+		background-color: darken($title-bg, 10%);
+		border: none;
+	}
+	input[type="button"]:hover, input[type="button"]:focus {
+		background-color: darken($title-bg, 15%);
+	}
+	form {
+		margin-bottom: 0;
+	}
+	.phone {
+		text-align: center;
+		font-weight: 300;
+	}
+	.p-name {
+		font-weight: 600;
+	}
+}
+.u-vert {
+	vertical-align: middle;
+}
+.logout-row {
+	margin-top: -2.5rem;
+}
