@@ -1,4 +1,7 @@
-<?php require 'templates/meta.php'; ?>
+<?php require 'templates/meta.php';
+  session_start();
+  $name = $_SESSION['logged_in_doctor'];
+?>
 <!-- Enter any extra code that should go inside the <head> tag here! Do this ONLY if this page needs a script or something that the other pages do not. -->
 
 <?php require 'templates/headerDoctor.php'; ?>
@@ -7,10 +10,10 @@
     <div class="container">
       <!-- CONTENT GOES HERE! -->
       	<div class="row">
-          <div class="u-pull-right"><button disabled>Logout</button></div>
+          <div class="u-pull-right"><a href="phpscripts/logout.php" class="button button-primary u-full-width" >Logout</a></div>
         </div>
         <div class="section">
-            <h3>Welcome, Doctor <!--name goes here --> </h3>
+            <h3>Welcome, <?php echo $name ?>!</h3>
             <hr>
             <div class="row doctor-home">
                 <div class="four columns">&nbsp;</div>
@@ -26,7 +29,7 @@
 	                
 	                <!-- Logout button -->
 	               <!-- <input class="button-primary" type="submit" value="Logout" id="submit-button" data-role="none">-->
-	                <button disabled>Logout</button> 
+	                <a href="phpscripts/logout.php" class="button button-primary u-full-width" >Logout</a>
                 </div>
                 <div class="four columns">&nbsp;</div>
             </div>
