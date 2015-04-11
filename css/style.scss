@@ -141,6 +141,16 @@ body {
 		margin-bottom: 1.2rem;
 		text-shadow: 0px 1px 0px $white;
 	}
+	a {
+		text-decoration: none;
+		color: lighten($base-black, 30%);
+		margin-top: 1.2rem;
+		margin-bottom: 1.2rem;
+		text-shadow: 0px 1px 0px $white;
+	}
+	a:hover, a:focus {
+		border-bottom: 1px dotted lighten($base-black, 30%);
+	}
 }
 @media (min-width: 400px) {
 	.all-footer {

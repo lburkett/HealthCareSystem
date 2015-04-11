@@ -45,4 +45,5 @@
     }
     echo "<hr>";
     echo "<a href=\"../index.php" . "\">Return to home</a>";
+    redirectAndExit("../formReturn.php");
 ?>

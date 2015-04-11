@@ -102,6 +102,14 @@ body {
     margin-top: 1.2rem;
     margin-bottom: 1.2rem;
     text-shadow: 0px 1px 0px white; }
+  .footer a {
+    text-decoration: none;
+    color: #6f6f6f;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    text-shadow: 0px 1px 0px white; }
+  .footer a:hover, .footer a:focus {
+    border-bottom: 1px dotted #6f6f6f; }
 
 @media (min-width: 400px) {
   .all-footer {

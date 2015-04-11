@@ -3,7 +3,7 @@
   <div class="all-footer">
     <div class="footer">
       <div class="container">
-        <p>&copy; <?php echo date("Y"); ?> Spencer Bywater, Lowell Burkett, Nikita Bhambhani, Connor Maddox, &amp; Kevin Van of Arizona State University.</p>
+        <p>&copy; <?php echo date("Y"); ?> <a href="http://spencerbyw.github.io/">Spencer Bywater</a>, <a href="http://github.com/lburkett">Lowell Burkett</a>, <a href="http://github.com/nbhambha">Nikita Bhambhani</a>, <a href="http://github.com/clmaddox">Connor Maddox</a>, &amp; <a href="http://github.com/johnny1235">Kevin Van</a> of <a href="http://asu.edu">Arizona State University</a>.</p>
       </div>
     </div>
     <div class="footerbar color1">

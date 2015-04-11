@@ -26,9 +26,9 @@
         <div class="four columns"><br></div>
         <div class="four columns navigate">
           <h5>I'm a...</h5>
-          <a href="form.php" class="button button-primary" style="margin-left: 2px;">Patient</a>
+          <a href="form.php" class="button button-primary" style="margin-left: 0px;">Patient</a>
           <br>
-            <a href="login.php" class="button button-primary" style="margin-left: 2px;">Doctor</a>
+            <a href="login.php" class="button button-primary" style="margin-right: 2px;">Doctor</a>
           <!-- <a href="#" class="button button-primary">*NOT DONE* Doctor</a> -->
           <!-- NOTE!: the button below is just to show it's disabled (cleaner-looking). Replace it with the above^ commented-out
                tag <a href...> when doctor page is made, then delete the button below. :D -->

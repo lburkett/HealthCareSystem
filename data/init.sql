@@ -32,4 +32,4 @@ INSERT INTO doctor (name, profession, email, password) VALUES ('Dr. Bywater', 'P
 INSERT INTO doctor (name, profession, email, password) VALUES ('Dr. Bhambhani', 'Sports Medicine', '', '');
 INSERT INTO doctor (name, profession, email, password) VALUES ('Dr. Burkett', 'Optometry', 'laburket@asu.edu', 'password');
 INSERT INTO doctor (name, profession, email, password) VALUES ('Dr. Maddox', 'Pharmacy', '', '');
-INSERT INTO doctor (name, profession, email, password) VALUES ('Dr. Van', 'Pediatric', '', '');
+INSERT INTO doctor (name, profession, email, password) VALUES ('Dr. Van', 'Pediatric', 'van', 'van');
