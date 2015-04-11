@@ -21,7 +21,7 @@ $(function() {
           <div class="u-pull-right logout-row"><button disabled>Logout</button></div>
         </div>
         <h3>Unresolved Reports</h3>
-        <p><strong>Patient reports for all doctors</p>
+        <p><strong>Unresolved patient reports for <em>all</em> doctors.</strong></p>
         <hr>
         <?php
           /*  Just Testing retrieveNotfication and resolvePatiet(works!) .. feel free to manipualte code...*/
