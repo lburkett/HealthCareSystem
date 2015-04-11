@@ -21,7 +21,7 @@ $(function() {
           <div class="u-pull-right logout-row"><button disabled>Logout</button></div>
         </div>
         <h3>Notifications</h3>
-        <p><strong>Patient reports specific to you, or reports sent to <em>any</em> doctor.</strong></p>
+        <p><strong>Patient reports specific to you</p>
         <hr>
         <?php
           /*  Just Testing retrieveNotfication and resolvePatiet(works!) .. feel free to manipualte code...*/
