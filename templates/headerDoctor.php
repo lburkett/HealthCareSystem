@@ -1,3 +1,4 @@
+<meta name="format-detection" content="telephone=no">
 </head>
 <body>
 

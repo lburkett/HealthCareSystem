@@ -155,3 +155,94 @@ body {
 
 .ui-page-theme-a {
   background-color: white !important; }
+
+/*-------------------------
+  DOCTOR INTERFACE STYLES
+-------------------------*/
+/*NOTIFICATIONS page */
+.patient-info {
+  border: 1px solid #a2a2a2;
+  background-color: #a7a7a7;
+  color: white;
+  border-radius: 3px;
+  padding-top: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  box-shadow: inset 0 1px 0 #c5c5c5; }
+  .patient-info .phone-num {
+    text-align: center !important; }
+  .patient-info .info-cont {
+    padding-bottom: .5rem; }
+  .patient-info .avg .symptoms-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #2f2f2f;
+    padding-right: .5rem; }
+  .patient-info .patient-name {
+    font-size: 2.0rem;
+    vertical-align: center;
+    text-align: left;
+    text-shadow: 0 -1px 0 #8d8d8d; }
+    .patient-info .patient-name a.close-expand {
+      vertical-align: middle;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      padding: 0 .7rem;
+      background-color: #087bb8;
+      border-radius: 2px;
+      color: white;
+      text-decoration: none;
+      text-shadow: none;
+      cursor: pointer;
+      box-shadow: inset 0px 1px 0 #0992da;
+      border: 1px solid #076ba0; }
+    .patient-info .patient-name a.close-expand:hover {
+      background-color: #0882c2; }
+  @media (min-width: 400px) {
+    .patient-info .doctor-name {
+      text-align: left; } }
+  .patient-info .doctor-name {
+    font-size: 1.5rem;
+    font-style: italic;
+    padding-top: .5rem;
+    color: whitesmoke;
+    text-shadow: 0 -1px 0 #c5c5c5; }
+  .patient-info .patient-details {
+    border-top: 1px dashed #a2a2a2;
+    background-color: #f8f8f8;
+    color: #222222;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+    display: none; }
+    .patient-info .patient-details .symptoms-title {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #2f2f2f; }
+    @media (min-width: 400px) {
+      .patient-info .patient-details .mobile-no {
+        display: block !important;
+        border-right: 1px dotted #a7a7a7; } }
+    .patient-info .patient-details .mobile-no {
+      display: none; }
+  .patient-info input[type="button"] {
+    margin-bottom: 0;
+    background-color: #8d8d8d;
+    border: none; }
+  .patient-info input[type="button"]:hover, .patient-info input[type="button"]:focus {
+    background-color: gray; }
+  .patient-info form {
+    margin-bottom: 0; }
+  .patient-info .phone {
+    text-align: center;
+    font-weight: 300; }
+  .patient-info .p-name {
+    font-weight: 600; }
+
+.u-vert {
+  vertical-align: middle; }
+
+.logout-row {
+  margin-top: -2.5rem; }

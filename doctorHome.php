@@ -7,7 +7,7 @@
     <div class="container">
       <!-- CONTENT GOES HERE! -->
       	<div class="row">
-          <div class="u-pull-right"><button disabled>Logout</button></div>
+          <div class="u-pull-right logout-row"><button disabled>Logout</button></div>
         </div>
         <div class="section">
             <h3>Welcome, Doctor <!--name goes here --> </h3>

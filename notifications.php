@@ -1,16 +1,91 @@
 <?php require 'templates/meta.php'; ?>
 <!-- Enter any extra code that should go inside the <head> tag here! Do this ONLY if this page needs a script or something that the other pages do not. -->
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script>
+$(function() {
+  $("a.close-expand").click(function() {
+    $(this).parent().parent().siblings(".patient-details").slideToggle("linear");
+  });
+});
+</script>
 <?php require 'templates/headerDoctor.php'; ?>
   <!-- Any content should go inside the container where indicated -->
   <div class="section content">
     <div class="container">
       <!-- CONTENT GOES HERE! -->
         <div class="row">
-          <div class="u-pull-right"><button disabled>Logout</button></div>
+          <div class="u-pull-right logout-row"><button disabled>Logout</button></div>
         </div>
-        Notifications page
-        <p><button disabled>Logout</button></p>  
+        <h3>Notifications</h3>
+        <p>Patient reports specific to you, or reports sent to <i>any</i> doctor.</p>
+        <hr>
+        <div class="row">
+          <div class="twelve columns patient-info">
+              <div class="twelve columns info-cont">
+                <div class="three columns patient-name">
+                  <a class="close-expand">+</a>
+                  <span class="u-vert p-name">Bobby Tables</span>
+                </div>
+                <div class="two columns patient-name phone-num">
+                  <span class="u-vert phone">123-456-1111</span>
+                </div>
+                <div class="two columns avg"><span class="symptoms-title">Severity</span><span class="u-vert">5.1</span></div>
+                <div class="three columns doctor-name">
+                  <span class="u-vert">Doctor Bywater</span>
+                </div>
+                <div class="two columns u-pull-right">
+                  <form>
+                    <input type="text" value="INSERT-PATIENT-ID-HERE-WITH-PHP" style="display: none;">
+                    <input type="button" class="button button-primary" value="Resolve">
+                  </form>
+                </div>
+              </div>
+            <!--Extra details regarding symptoms -->
+            <div class="twelve columns patient-details">
+              <div class="two columns mobile-no"><div class="symptoms-title">Average</div>5.1</div>
+              <div class="two columns"><div class="symptoms-title">Pain</div>5</div>
+              <div class="two columns"><div class="symptoms-title">Nausea</div>0</div>
+              <div class="two columns"><div class="symptoms-title">Depression</div>7</div>
+              <div class="two columns"><div class="symptoms-title">Anxiety</div>3</div>
+              <div class="two columns"><div class="symptoms-title">Drowsiness</div>10</div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="row">
+          <div class="twelve columns patient-info">
+              <div class="twelve columns info-cont">
+                <div class="three columns patient-name">
+                  <a class="close-expand">+</a>
+                  <span class="u-vert p-name">Bobby Tables</span>
+                </div>
+                <div class="two columns patient-name phone-num">
+                  <span class="u-vert phone">123-456-1111</span>
+                </div>
+                <div class="two columns avg"><span class="symptoms-title">Severity</span><span class="u-vert">5.1</span></div>
+                <div class="three columns doctor-name">
+                  <span class="u-vert">Doctor Bywater</span>
+                </div>
+                <div class="two columns u-pull-right">
+                  <form>
+                    <input type="text" value="INSERT-PATIENT-ID-HERE-WITH-PHP" style="display: none;">
+                    <input type="button" class="button button-primary" value="Resolve">
+                  </form>
+                </div>
+              </div>
+            <!--Extra details regarding symptoms -->
+            <div class="twelve columns patient-details">
+              <div class="two columns mobile-no"><div class="symptoms-title">Average</div>5.1</div>
+              <div class="two columns"><div class="symptoms-title">Pain</div>5</div>
+              <div class="two columns"><div class="symptoms-title">Nausea</div>0</div>
+              <div class="two columns"><div class="symptoms-title">Depression</div>7</div>
+              <div class="two columns"><div class="symptoms-title">Anxiety</div>3</div>
+              <div class="two columns"><div class="symptoms-title">Drowsiness</div>10</div>
+            </div>
+          </div>
+        </div>
+
         <!-- CONTENT ENDS HERE! -->
     </div>
   </div>
