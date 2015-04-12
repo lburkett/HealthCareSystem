@@ -24,7 +24,6 @@
         return htmlspecialchars($html, ENT_HTML5, 'UTF-8');
     }
 
-
     function redirectAndExit($script) {
         // Get the domain-relative URL (e.g. /blog/whatever.php or /whatever.php) and work
         // out the folder (e.g. /blog/ or /).

@@ -10,7 +10,8 @@
     <div class="container">
       <!-- CONTENT GOES HERE! -->
       	<div class="row">
-          <div class="u-pull-right"><a href="phpscripts/logout.php" class="button button-primary u-full-width" >Logout</a></div>
+          <div class="u-pull-right logout-row"><a href="phpscripts/logout.php" class="button button-primary u-full-width">Logout</a></div>
+
         </div>
         <div class="section">
             <h3>Welcome, <?php echo $name ?>!</h3>
