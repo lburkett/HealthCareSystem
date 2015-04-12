@@ -64,7 +64,7 @@
 
         $password = '';
         for($i = 0; $i < $length; $i++) {
-            $letterCode = $alphabet[rand(0, $alphaLength - 1)];
+            $letterCode = $alpha[rand(0, $alphaLength - 1)];
             $password .= chr($letterCode);
         }
 
@@ -73,8 +73,9 @@
         $sql = "INSERT INTO doctor(name, profession, email, password)
                 VALUES (:name, :profession, :email, :password)";
         $stmt = $pdo->prepare($sql);
+
         if($stmt === false) {
-            $error = 'Could not prepare the user creation';
+            $error = 'Could not prepare the user creation.';
         }
 
         // Password hash
@@ -91,11 +92,11 @@
                     'name' => "admin",
                     'profession' => "admin",
                     'email' => $username,
-                    'password' => $hash
+                    'password' => $hash,
                 )
             );
             if($result === false) {
-                $error = 'Could not run the user creation';
+                $error = 'Could not run the user creation.';
             }
         }
 

@@ -4,5 +4,5 @@
 
 	session_start();
 	logout();
-	redirectAndExit('index.php');
+	redirectAndExit('../index.php');
 ?>
