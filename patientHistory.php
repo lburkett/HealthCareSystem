@@ -25,7 +25,7 @@ $(function() {
     <div class="container">
       <!-- CONTENT GOES HERE! -->
         <div class="row">
-          <div class="u-pull-right logout-row"><button disabled>Logout</button></div>
+          <div class="u-pull-right logout-row"><a href="phpscripts/logout.php" class="button button-primary u-full-width">Logout</a></div>
         </div>
         <h3>Patient History</h3>
         <p><strong>All reports for <em>all</em> doctors.</strong></p>
