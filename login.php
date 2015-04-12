@@ -1,18 +1,21 @@
 <?php
   require 'templates/meta.php';
   require_once 'phpscripts/authenticate.php';
+  require_once 'phpscripts/common.php';
+
   session_start();
 
   $username = '';
   if ($_POST) {
-    $username = $_POST['userName'];
+    $username = $_POST['username'];
     $success = loginAttempt($username, $_POST['password']);
 
     if ($success) {
       $name = nameLookup($username);
       login($username, $name);
 
-      header('Location: doctorHome.php');
+      //header('Location: doctorHome.php');
+      redirectAndExit('doctorHome.php');
     }
   }
 ?>
@@ -71,8 +74,8 @@ $(document).bind("mobileinit", function () {
               <div class="four columns"><br></div> 
 				<div class="four columns">
 					<form class="login-form" method="post">
-						<label for="userName">Username</label>
-						<input type="text" class="u-full-width" placeholder="Username" id="userName" name="userName">
+						<label for="username">Username</label>
+						<input type="text" class="u-full-width" placeholder="Username" id="usernme" name="username">
 						
 						<label for="password">Password</label>
 						<input type="password" class="u-full-width" placeholder="Password" id="password" name="password">

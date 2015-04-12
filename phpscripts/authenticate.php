@@ -18,7 +18,8 @@
 
 		$stmt->execute();
 
-		$confirm = passwordCheck($stmt->fetchColumn(), $passwordToCheck);
+		$hash = $stmt->fetchColumn();
+		$confirm = passwordCheck($passwordToCheck, $hash);
 
 		return $confirm;
 	}
@@ -60,5 +61,27 @@
 
 		$_SESSION['logged_in_username'] = $username;
 		$_SESSION['logged_in_doctor'] = $name;
+	}
+
+	/* Unsets the session variables which logs the user out */
+	function logout() {
+		unset($_SESSION['logged_in_username']);
+		unset($_SESSION['logged_in_doctor']);
+	}
+
+	/* Returns the currently logged in doctor if there is one */
+	function getDoctor() {
+		if (isLoggedIn()) {
+			// Might need to be an array with both the logged_in_username and logged_in_doctor
+			return $_SESSION['logged_in_doctor'];
+		}
+		else {
+			return null;
+		}
+	}
+
+	/* Checks if there is a doctor logged in */
+	function isLoggedIn() {
+		return isset($_SESSION['logged_in_username']);
 	}
 ?>
