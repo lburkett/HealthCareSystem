@@ -1,6 +1,8 @@
 <?php
   require 'templates/meta.php';
   require_once 'phpscripts/authenticate.php';
+  require_once 'phpscripts/common.php';
+
   session_start();
 
   $username = '';
@@ -12,7 +14,8 @@
       $name = nameLookup($username);
       login($username, $name);
 
-      header('Location: doctorHome.php');
+      //header('Location: doctorHome.php');
+      redirectAndExit('doctorHome.php');
     }
   }
 ?>
