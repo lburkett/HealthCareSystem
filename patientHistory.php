@@ -63,9 +63,13 @@ $(function() {
                   <span class="u-vert"><?php echo $row['doctorRequested']; ?></span>
                 </div>
                 <div class="two columns u-pull-right">
-                  <form>
-                    <input type="text" value=<?php echo "\"" . $row['id'] . "\""; ?> style="display: none;">
-                    <input type="button" class="button button-primary" value="Resolve">
+                  <form action="phpscripts/resolvePatient.php" method="post">
+                    <input type="text" value=<?php echo "\"" . $row['id'] . "\""; ?> style="display: none;" name="patient-id">
+                    <?php if ($row['resolved'] == 0) { ?>
+                    <input type="submit" class="button button-primary" value="Resolve" name="resolve-button">
+                    <?php } else { ?>
+                    <div class="checkmark">&#10004;</div>
+                    <?php } ?>
                   </form>
                 </div>
               </div>

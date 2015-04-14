@@ -39,7 +39,7 @@ $(function() {
           
           $test = new Patient;
           $manager = new notificationManager;
-          $test = $manager->retrieveNotification($name);
+          $test = $manager->retrieveNotification($name);  //Retrieves name from the $_SESSION variable
         ?>
         <?php //Begin pulling patients from the database ?>
         <?php 
@@ -63,9 +63,9 @@ $(function() {
                   <span class="u-vert"><?php echo $row['doctorRequested']; ?></span>
                 </div>
                 <div class="two columns u-pull-right">
-                  <form>
-                    <input type="text" value=<?php echo "\"" . $row['id'] . "\""; ?> style="display: none;">
-                    <input type="button" class="button button-primary" value="Resolve">
+                  <form action="phpscripts/resolvePatient.php" method="post">
+                    <input type="text" value=<?php echo "\"" . $row['id'] . "\""; ?> style="display: none;" name="patient-id">
+                    <input type="submit" class="button button-primary" value="Resolve" name="resolve-button">
                   </form>
                 </div>
               </div>

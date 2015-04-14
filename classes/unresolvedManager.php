@@ -19,16 +19,16 @@
         }
 	    /* Queries the database and returns all unresolved patient information */
         public function retrieveUnresolved() {
-        return $this->db->query("SELECT * FROM patient WHERE resolved = 0");
+            return $this->db->query("SELECT * FROM patient WHERE resolved = 0");
         }
-        /* Marks the patient id entered as resolved */
-        public function resolvePatient($doc, $p) {
-        
-        $stmt = $this->db->prepare("UPDATE patient SET resolved = 1 WHERE doctorRequested = '".$doc."' AND fname = '".$p."'");
-        $stmt->execute();
 
+        //NOT NEEDED BECAUSE notificationManager ALREADY HAS THIS FUNCTION
+        /* Marks the patient id entered as resolved 
+        public function resolvePatient($doc, $p) {
+            $stmt = $this->db->prepare("UPDATE patient SET resolved = 1 WHERE id = '". $id ."'");
+            $stmt->execute();
         }
-    
+        */
 
 	}
 ?>

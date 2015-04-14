@@ -34,6 +34,7 @@
     <?php  
     // Prints out the fname and lname column for each patient in the database
     // (We can format this better but for now it works)
+    /*
     while($row = $newPatient->fetch(PDO::FETCH_ASSOC)) {
     	echo "ID: " . $row['id']  . " First Name: "; 
         echo $row['fname'] . " Last Name: ";
@@ -45,5 +46,6 @@
     }
     echo "<hr>";
     echo "<a href=\"../index.php" . "\">Return to home</a>";
+    */
     redirectAndExit("../formReturn.php");
 ?>
