@@ -53,14 +53,14 @@ $(function() {
               <div class="twelve columns info-cont">
                 <div class="three columns patient-name">
                   <a class="close-expand">+</a>
-                  <span class="u-vert p-name"><?php echo $row['fname']. " " . $row['lname']; ?></span>
+                  <span class="u-vert p-name"><?php echo htmlEscape($row['fname']. " " . $row['lname']); ?></span>
                 </div>
                 <div class="two columns patient-name phone-num">
-                  <span class="u-vert phone"><?php echo $row['phone']; ?></span>
+                  <span class="u-vert phone"><?php echo htmlEscape($row['phone']); ?></span>
                 </div>
                 <div class="two columns avg"><span class="symptoms-title">Severity</span><span class="u-vert"><?php echo $row['average']; ?></span></div>
                 <div class="three columns doctor-name">
-                  <span class="u-vert"><?php echo $row['doctorRequested']; ?></span>
+                  <span class="u-vert"><?php echo htmlEscape($row['doctorRequested']); ?></span>
                 </div>
                 <div class="two columns u-pull-right">
                   <form action="phpscripts/resolvePatient.php" method="post">
@@ -85,39 +85,6 @@ $(function() {
             echo "There appear to be no patients requiring immediate assistance. Keep up the good work!";
           }
         ?>
-        <!-- TEMPLATE
-        <div class="row">
-          <div class="twelve columns patient-info">
-              <div class="twelve columns info-cont">
-                <div class="three columns patient-name">
-                  <a class="close-expand">+</a>
-                  <span class="u-vert p-name">Bobby Tables</span>
-                </div>
-                <div class="two columns patient-name phone-num">
-                  <span class="u-vert phone">123-456-1111</span>
-                </div>
-                <div class="two columns avg"><span class="symptoms-title">Severity</span><span class="u-vert">5.1</span></div>
-                <div class="three columns doctor-name">
-                  <span class="u-vert">Doctor Bywater</span>
-                </div>
-                <div class="two columns u-pull-right">
-                  <form>
-                    <input type="text" value="INSERT-PATIENT-ID-HERE-WITH-PHP" style="display: none;">
-                    <input type="button" class="button button-primary" value="Resolve">
-                  </form>
-                </div>
-              </div>
-            <div class="twelve columns patient-details">
-              <div class="two columns mobile-no"><div class="symptoms-title">Average</div>5.1</div>
-              <div class="two columns"><div class="symptoms-title">Pain</div>5</div>
-              <div class="two columns"><div class="symptoms-title">Nausea</div>0</div>
-              <div class="two columns"><div class="symptoms-title">Depression</div>7</div>
-              <div class="two columns"><div class="symptoms-title">Anxiety</div>3</div>
-              <div class="two columns"><div class="symptoms-title">Drowsiness</div>10</div>
-            </div>
-          </div>
-        </div>
-        -->
 
         <!-- CONTENT ENDS HERE! -->
     </div>

@@ -53,14 +53,14 @@ $(function() {
               <div class="twelve columns info-cont">
                 <div class="three columns patient-name">
                   <a class="close-expand">+</a>
-                  <span class="u-vert p-name"><?php echo $row['fname']. " " . $row['lname']; ?></span>
+                  <span class="u-vert p-name"><?php echo htmlEscape($row['fname']. " " . $row['lname']); ?></span>
                 </div>
                 <div class="two columns patient-name phone-num">
-                  <span class="u-vert phone"><?php echo $row['phone']; ?></span>
+                  <span class="u-vert phone"><?php echo htmlEscape($row['phone']); ?></span>
                 </div>
                 <div class="two columns avg"><span class="symptoms-title">Severity</span><span class="u-vert"><?php echo $row['average']; ?></span></div>
                 <div class="three columns doctor-name">
-                  <span class="u-vert"><?php echo $row['doctorRequested']; ?></span>
+                  <span class="u-vert"><?php echo htmlEscape($row['doctorRequested']); ?></span>
                 </div>
                 <div class="two columns u-pull-right">
                   <form action="phpscripts/resolvePatient.php" method="post">

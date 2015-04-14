@@ -22,7 +22,7 @@
 
         </div>
         <div class="section">
-            <h3>Welcome, <?php echo $name ?>!</h3>
+            <h3>Welcome, <?php echo htmlEscape($name); ?>!</h3>
             <hr>
             <div class="row doctor-home">
                 <div class="four columns">&nbsp;</div>
