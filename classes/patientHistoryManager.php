@@ -19,7 +19,7 @@
         }
 	    /* Queries the database and returns all patient information */
         public function retrieveHistory() {
-            return $this->db->query("SELECT * FROM patient ORDER BY id DESC");
+            return $this->db->query("SELECT * FROM patient ORDER BY id DESC LIMIT 20");
         }
 
         //NOT NEEDED BECAUSE notificationManager ALREADY HAS THIS FUNCTION

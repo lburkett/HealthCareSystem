@@ -35,7 +35,9 @@
 	                
 	                <!-- View Patient History button -->
 	                <a href="patientHistory.php" class="button button-primary u-full-width" >View Patient History</a>
-	                
+	                <hr>
+              
+                  <a href="changePassword.php" class="button button-primary u-full-width" >Change Your Password</a>
 	                <!-- Logout button -->
 	               <!-- <input class="button-primary" type="submit" value="Logout" id="submit-button" data-role="none">-->
 	                <a href="phpscripts/logout.php" class="button button-primary u-full-width" >Logout</a>

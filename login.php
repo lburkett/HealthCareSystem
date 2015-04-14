@@ -4,7 +4,9 @@
   require_once 'phpscripts/common.php';
 
   session_start();
-
+  if (isLoggedIn()) {
+    redirectAndExit('doctorHome.php');
+  }
   $username = '';
   if ($_POST) {
     $username = $_POST['username'];
@@ -72,17 +74,17 @@ $(document).bind("mobileinit", function () {
             <!-- username textbox -->
             <div class="row">
               <div class="four columns"><br></div> 
-				<div class="four columns">
-					<form class="login-form" method="post">
-						<label for="username">Username</label>
-						<input type="text" class="u-full-width" placeholder="Username" id="usernme" name="username">
-						
-						<label for="password">Password</label>
-						<input type="password" class="u-full-width" placeholder="Password" id="password" name="password">
-						
-						<input class="button-primary" type="submit" value="Login" id="login-button" data-role="none">
-					</form>
-				</div>
+      				<div class="four columns">
+      					<form class="login-form" method="post">
+      						<label for="username">Username</label>
+      						<input type="text" class="u-full-width" placeholder="Username" id="usernme" name="username">
+      						
+      						<label for="password">Password</label>
+      						<input type="password" class="u-full-width" placeholder="Password" id="password" name="password">
+      						
+      						<input class="button-primary" type="submit" value="Login" id="login-button" data-role="none">
+      					</form>
+      				</div>
                 <div class="four columns"><br></div>  
             </div>  
  
