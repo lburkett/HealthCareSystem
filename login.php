@@ -41,7 +41,7 @@ $(document).bind("mobileinit", function () {
 	$(document).ready(function () {
         $('.login-form').isHappy({
           fields: {
-            '#userName': {
+            '#username': {
               required: true,
             },
             '#password': {
@@ -76,10 +76,10 @@ $(document).bind("mobileinit", function () {
               <div class="four columns"><br></div> 
       				<div class="four columns">
       					<form class="login-form" method="post">
-      						<label for="username">Username</label>
-      						<input type="text" class="u-full-width" placeholder="Username" id="usernme" name="username">
+      						<label for="username" class="u-pull-left">Username</label>
+      						<input type="text" class="u-full-width" placeholder="Username" id="username" name="username">
       						
-      						<label for="password">Password</label>
+      						<label for="password" class="u-pull-left">Password</label>
       						<input type="password" class="u-full-width" placeholder="Password" id="password" name="password">
       						
       						<input class="button-primary" type="submit" value="Login" id="login-button" data-role="none">
@@ -90,7 +90,7 @@ $(document).bind("mobileinit", function () {
  
             <div class="row">
                 <!-- forgot password link -->
-                <a href ="#">Forgot Password?</a>
+                <a href ="forgotPassword.php">Forgot Password?</a>
             
             </div>
             <!--</form>-->
