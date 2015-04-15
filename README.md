@@ -7,5 +7,5 @@ for CSE 360 - Intro to Software Engineering.
 * Connor Maddox
 * Kevin Van
 
-Current Version on Display at:
+Most recent release on display at:
 http://patientcare.spencerbywater.me/
