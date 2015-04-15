@@ -11,6 +11,43 @@
 ?>
 <!-- Enter any extra code that should go inside the <head> tag here! Do this ONLY if this page needs a script or something that the other pages do not. -->
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script type="text/javascript">
+// Prevents the jQuery mobile handler from taking over screen switching. 
+$(document).bind("mobileinit", function () {
+    $.mobile.ajaxEnabled = false;
+});
+</script>  
+        
+        <script src="scripts/happy.js"></script>
+
+<script type="text/javascript">
+    
+ /*  Uncomment this after the chnage password functionality works */   
+    
+/*   var happy = {
+    notDoneYet: function () {
+    	alert("Please complete blank fields.");
+    	return false;
+	    }
+	};
+	$(document).ready(function () {
+        $('.change-form').isHappy({
+          fields: {
+            '#oldpwd': {
+              required: true,
+            },
+            '#newpwd1': {
+              required: true,
+            },
+            '#newpwd2': {
+            	required: true,
+            }
+          },
+          unHappy: happy.notDoneYet
+        });
+      }); */
+</script>
 <?php require 'templates/header.php'; ?>
   <!-- Any content should go inside the container where indicated -->
   <div class="section content">
@@ -25,7 +62,7 @@
 	    <div class="row">
           <div class="four columns"><br></div> 
   				<div class="four columns">
-  					<form class="login-form" method="post">
+  					<form class="change-form" method="post">
   						<label for="oldpwd" class="u-pull-left">Your Old Password:</label>
   						<input type="password" class="u-full-width" placeholder="Old Password" id="oldpwd" name="oldpwd">
 
