@@ -90,8 +90,8 @@ $(document).bind("mobileinit", function () {
  
             <div class="row">
                 <!-- forgot password link -->
-                <a href ="forgotPassword.php">Forgot Password?</a>
-            
+                <a href ="forgotPassword.php">Forgot Password?</a><br>
+                <a href ="changePassword.php">Change Password?</a>
             </div>
             <!--</form>-->
         <!--conatiner ends -->       

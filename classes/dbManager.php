@@ -80,5 +80,14 @@
                                      WHERE
                                         name <> 'admin'");
         }
+        public function getDoctorPasswordHash($username) {
+            $doctor = $this->db->query("SELECT 1 FROM doctor WHERE username = '". $username ."'");
+            return $doctor['password'];
+
+        }
+        public function setDoctorPassword($username, $password) {
+            $stmt = $this->db->prepare("UPDATE doctor SET password = '".$password."' WHERE username = '".$username."'");
+            $stmt->execute();
+        }
 	}
 ?>
