@@ -18,4 +18,6 @@
     
     // Returns to the adminview
     redirectAndExit("../formReturn.php");
+
+    // The contents should be moved to the admin view after the admin is logged in
 ?>
