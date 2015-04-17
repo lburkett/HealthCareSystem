@@ -249,6 +249,7 @@ body {
   .patient-info .p-name {
     font-weight: 600; }
 
+/*EXTRANEOUS STYLES*/
 .u-vert {
   vertical-align: middle; }
 
@@ -264,5 +265,17 @@ body {
   border-radius: 50%;
   box-shadow: inset 0px 1px 0 #51d760;
   text-shadow: 0 -1px 0 #1b7425; }
+
+.sev-yellow {
+  color: #ecc648 !important;
+  text-shadow: 0 0px 2px black; }
+
+.sev-orange {
+  color: #EB6841 !important;
+  text-shadow: 0 0px 2px #dadada; }
+
+.sev-red {
+  color: #CC333F !important;
+  text-shadow: 0 0px 2px #dadada; }
 
 /*# sourceMappingURL=style.css.map */

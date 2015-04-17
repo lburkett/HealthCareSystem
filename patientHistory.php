@@ -58,7 +58,7 @@ $(function() {
                 <div class="two columns patient-name phone-num">
                   <span class="u-vert phone"><?php echo htmlEscape($row['phone']); ?></span>
                 </div>
-                <div class="two columns avg"><span class="symptoms-title">Severity</span><span class="u-vert"><?php echo $row['average']; ?></span></div>
+                <div class="two columns avg"><span class="symptoms-title<?php echo determineSeverityColor($row['average']); ?>">Severity</span><span class="u-vert"><?php echo $row['average']; ?></span></div>
                 <div class="three columns doctor-name">
                   <span class="u-vert"><?php echo htmlEscape($row['doctorRequested']); ?></span>
                 </div>

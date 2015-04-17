@@ -330,6 +330,8 @@ $expander-color: #087BB8;
 		font-weight: 600;
 	}
 }
+
+/*EXTRANEOUS STYLES*/
 .u-vert {
 	vertical-align: middle;
 }
@@ -346,4 +348,17 @@ $expander-color: #087BB8;
 	border-radius: 50%;
 	box-shadow: inset 0px 1px 0 lighten($checkmark-green, 20%);
 	text-shadow: 0 -1px 0 darken($checkmark-green, 10%);
+}
+
+.sev-yellow {
+	color: darken($yellow, 2%) !important;
+	text-shadow: 0 0px 2px darken($title-bg, 90%);
+}
+.sev-orange {
+	color: $orange !important;
+	text-shadow: 0 0px 2px lighten($title-bg, 20%);
+}
+.sev-red {
+	color: $red !important;
+	text-shadow: 0 0px 2px lighten($title-bg, 20%);
 }

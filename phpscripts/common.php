@@ -36,4 +36,17 @@
         header('Location: ' . $fullUrl);
         exit();
     }
+
+    function determineSeverityColor($avg) {
+        if ($avg >= 8) {
+            return " sev-red";
+        }
+        if ($avg >= 6) {
+            return " sev-orange";
+        }
+        if ($avg >= 4) {
+            return " sev-yellow";
+        }
+
+    }
 ?>
