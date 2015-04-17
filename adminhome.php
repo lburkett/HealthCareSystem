@@ -1,19 +1,33 @@
-<?php require 'templates/meta.php'; ?>
+<?php
+	require 'templates/meta.php'; 
+    require_once 'phpscripts/common.php';
+    require_once 'phpscripts/authenticate.php';
+	require_once 'classes/doctor.php';
+	require_once 'classes/adminManager.php';
+
+	session_start();
+
+	// No user logged in, redirects to login
+    if(!isLoggedIn())
+    	redirectAndExit('login.php');
+	// Doctor logged in, redirects to doctor home
+	if($_SESSION['logged_in_username'] != "admin")
+    	redirectAndExit('doctorHome.php');
+	
+	$test = new Doctor;
+	$manager = new adminManager;
+	$test = $manager->retrieveDoctor();  //Retrieves name from the $_SESSION variable
+?>
 <!-- Enter any extra code that should go inside the <head> tag here! Do this ONLY if this page needs a script or something that the other pages do not. -->
 <?php require 'templates/header.php';?>
   <!-- Any content should go inside the container where indicated -->
   <div class="section content">
     <div class="container">
+    <div class="row">
+          <div class="u-pull-right logout-row"><a href="phpscripts/logout.php" class="button button-primary u-full-width">Logout</a></div>
       <!-- CONTENT GOES HERE! -->
        <?php
-          /*  Just Testing retrieveNotfication and resolvePatiet(works!) .. feel free to manipualte code...*/
-          require_once 'phpscripts/common.php';
-          require_once 'classes/doctor.php';
-          require_once 'classes/adminManager.php';
           
-          $test = new Doctor;
-          $manager = new adminManager;
-          $test = $manager->retrieveDoctor();  //Retrieves name from the $_SESSION variable
 
         while($row = $test->fetch(PDO::FETCH_ASSOC)) {
     	echo "Name: " . $row['name']  . " Profession: "; 

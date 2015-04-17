@@ -3,21 +3,27 @@
 	require_once 'common.php';
 	require_once '../classes/doctor.php';
     require_once '../classes/adminManager.php';
+    require_once 'password.php';
 
 	$newDoctor = new Doctor;
     $manager = new adminManager;
 
-	// Sets new patient information
+	// Sets new doctor information
 	$newDoctor->setname($_POST['name']);
 	$newDoctor->setprofession($_POST['profession']);
 	$newDoctor->setemail($_POST['email']);
-	$newDoctor->setpassword($_POST['password']);
+	$password = $_POST['password'];
+	$hash = password_hash($password, PASSWORD_DEFAULT)
+	//$newDoctor->setpassword($hash);
 
-	// Prints out new patient information
-	$newDoctor->__toString();
+	//$check = password_verify($_POST['password'], $hash);
+	echo $hash;
+
+	// Prints out new doctor information
+	//$newDoctor->__toString();
     
     // Inserts a patient and tests a query
     $manager->addDoctor($newDoctor);
 
-    redirectAndExit("../adminHome.php");
+    //redirectAndExit("../adminHome.php");
 ?>
