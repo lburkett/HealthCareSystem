@@ -14,6 +14,7 @@ $yellow: #EDC951;
 $ice-blue: lighten($blue, 40%);
 $soft-blue-white: #F3FFFF;
 $soft-blue-shadow: #06737E;
+$checkmark-green: #249E32;
 
 body { 
 	background: $white;
@@ -268,7 +269,7 @@ $expander-color: #087BB8;
 			text-decoration: none;
 			text-shadow: none;
 			cursor: pointer;
-			box-shadow: inset 0px 1px 0 lighten($expander-color, 7%);
+			box-shadow: inset 1px 1px 0 lighten($expander-color, 14%);
 			border: 1px solid darken($expander-color, 5%);
 		}
 		a.close-expand:hover {
@@ -310,12 +311,12 @@ $expander-color: #087BB8;
 			display: none;
 		}
 	}
-	input[type="button"] {
+	input[type="submit"] {
 		margin-bottom: 0;
 		background-color: darken($title-bg, 10%);
 		border: none;
 	}
-	input[type="button"]:hover, input[type="button"]:focus {
+	input[type="submit"]:hover, input[type="submit"]:focus {
 		background-color: darken($title-bg, 15%);
 	}
 	form {
@@ -334,4 +335,15 @@ $expander-color: #087BB8;
 }
 .logout-row {
 	margin-top: -2.5rem;
+}
+
+.checkmark {
+	background-color: $checkmark-green;
+	color: lighten($checkmark-green, 55%);
+	border: 1px solid darken($checkmark-green, 20%);
+	margin: 0 auto;
+	width: 32px;
+	border-radius: 50%;
+	box-shadow: inset 0px 1px 0 lighten($checkmark-green, 20%);
+	text-shadow: 0 -1px 0 darken($checkmark-green, 10%);
 }

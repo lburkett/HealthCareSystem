@@ -4,7 +4,7 @@
 /*VARIABLES*/
 /*Palette "Ocean Five"*/
 body {
-  background: white; }
+  background: #fff; }
 
 /*-------------------
  LANDING PAGE STYLES
@@ -20,24 +20,24 @@ body {
     padding-bottom: 4.5rem; } }
 .heading-landing {
   border-top: 4px solid #e3fcff;
-  background-color: #00a0b0;
-  background-image: linear-gradient(to top, #005a63 0%, #00a0b0 15%);
-  color: white;
+  background-color: #00A0B0;
+  background-image: linear-gradient(to top, #005a63 0%, #00A0B0 15%);
+  color: #fff;
   padding-top: 1.5rem;
   padding-bottom: 0.5rem; }
   .heading-landing h1.fit-title {
     text-align: center; }
 
 .fit-title, .fit-title-base {
-  color: #f3ffff;
-  text-shadow: 0px 2px 1px #06737e; }
+  color: #F3FFFF;
+  text-shadow: 0px 2px 1px #06737E; }
 
 /*HEADING*/
 .heading {
   border-top: 3px solid #e3fcff;
-  background-color: #00a0b0;
-  background-image: linear-gradient(to top, #005a63 0%, #00a0b0 15%);
-  color: white;
+  background-color: #00A0B0;
+  background-image: linear-gradient(to top, #005a63 0%, #00A0B0 15%);
+  color: #fff;
   padding-top: 1rem; }
   .heading h1.fit-title-base {
     font-size: 1.9rem;
@@ -45,7 +45,7 @@ body {
     text-align: left; }
   .heading a {
     text-decoration: none;
-    color: white; }
+    color: #fff; }
   .heading img {
     width: 30px;
     height: 30px;
@@ -65,7 +65,7 @@ body {
 .welcome {
   padding-top: 4rem;
   border-top: 1px solid #7df3ff;
-  background-image: linear-gradient(to bottom, #e6e6e6 5px, white 50px); }
+  background-image: linear-gradient(to bottom, #e6e6e6 5px, #fff 50px); }
   .welcome h4 {
     font-style: italic; }
 
@@ -78,10 +78,10 @@ body {
   padding-bottom: 20px; }
   .direct .navigate a {
     text-decoration: none;
-    color: white;
+    color: #fff;
     margin: 10px auto; }
   .direct .navigate .btn {
-    background-color: #00a0b0;
+    background-color: #00A0B0;
     line-height: 100%;
     border-radius: 5px;
     padding: 10px;
@@ -101,13 +101,13 @@ body {
   .footer p {
     margin-top: 1.2rem;
     margin-bottom: 1.2rem;
-    text-shadow: 0px 1px 0px white; }
+    text-shadow: 0px 1px 0px #fff; }
   .footer a {
     text-decoration: none;
     color: #6f6f6f;
     margin-top: 1.2rem;
     margin-bottom: 1.2rem;
-    text-shadow: 0px 1px 0px white; }
+    text-shadow: 0px 1px 0px #fff; }
   .footer a:hover, .footer a:focus {
     border-bottom: 1px dotted #6f6f6f; }
 
@@ -115,22 +115,22 @@ body {
   .all-footer {
     margin-top: 10px; } }
 .footerbar {
-  background-color: #00a0b0; }
+  background-color: #00A0B0; }
   .footerbar .color-sty {
     height: 4px;
     width: 25%;
     display: block;
     float: left; }
   .footerbar .color1 {
-    background-color: #00a0b0; }
+    background-color: #00A0B0; }
   .footerbar .color2 {
-    background-color: #6a4a3c; }
+    background-color: #6A4A3C; }
   .footerbar .color3 {
-    background-color: #cc333f; }
+    background-color: #CC333F; }
   .footerbar .color4 {
-    background-color: #eb6841; }
+    background-color: #EB6841; }
   .footerbar .color5 {
-    background-color: #edc951; }
+    background-color: #EDC951; }
 
 /*CONTENT section*/
 .content, .landing-content {
@@ -140,7 +140,7 @@ body {
 .content {
   padding-top: 4rem;
   border-top: 1px solid #7df3ff;
-  background-image: linear-gradient(to bottom, #e6e6e6 5px, white 50px); }
+  background-image: linear-gradient(to bottom, #e6e6e6 5px, #fff 50px); }
 
 /*FORM styles */
 .explanation {
@@ -162,7 +162,7 @@ body {
   flex-direction: column; }
 
 .ui-page-theme-a {
-  background-color: white !important; }
+  background-color: #fff !important; }
 
 /*-------------------------
   DOCTOR INTERFACE STYLES
@@ -171,7 +171,7 @@ body {
 .patient-info {
   border: 1px solid #a2a2a2;
   background-color: #a7a7a7;
-  color: white;
+  color: #fff;
   border-radius: 3px;
   padding-top: 1rem;
   font-size: 2rem;
@@ -198,13 +198,13 @@ body {
       margin-left: 1rem;
       margin-right: 1rem;
       padding: 0 .7rem;
-      background-color: #087bb8;
+      background-color: #087BB8;
       border-radius: 2px;
-      color: white;
+      color: #fff;
       text-decoration: none;
       text-shadow: none;
       cursor: pointer;
-      box-shadow: inset 0px 1px 0 #0992da;
+      box-shadow: inset 1px 1px 0 #13a6f5;
       border: 1px solid #076ba0; }
     .patient-info .patient-name a.close-expand:hover {
       background-color: #0882c2; }
@@ -220,7 +220,7 @@ body {
   .patient-info .patient-details {
     border-top: 1px dashed #a2a2a2;
     background-color: #f8f8f8;
-    color: #222222;
+    color: #222;
     padding-top: 1rem;
     padding-bottom: .5rem;
     display: none; }
@@ -235,11 +235,11 @@ body {
         border-right: 1px dotted #a7a7a7; } }
     .patient-info .patient-details .mobile-no {
       display: none; }
-  .patient-info input[type="button"] {
+  .patient-info input[type="submit"] {
     margin-bottom: 0;
     background-color: #8d8d8d;
     border: none; }
-  .patient-info input[type="button"]:hover, .patient-info input[type="button"]:focus {
+  .patient-info input[type="submit"]:hover, .patient-info input[type="submit"]:focus {
     background-color: gray; }
   .patient-info form {
     margin-bottom: 0; }
@@ -254,3 +254,15 @@ body {
 
 .logout-row {
   margin-top: -2.5rem; }
+
+.checkmark {
+  background-color: #249E32;
+  color: #e2f8e5;
+  border: 1px solid #114b18;
+  margin: 0 auto;
+  width: 32px;
+  border-radius: 50%;
+  box-shadow: inset 0px 1px 0 #51d760;
+  text-shadow: 0 -1px 0 #1b7425; }
+
+/*# sourceMappingURL=style.css.map */

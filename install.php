@@ -86,7 +86,7 @@
                 </div>
 
                 <p>
-                    <a href="index.php">Go to blog</a>.
+                    <a href="index.php">Return to Efferent Patient Care System</a>.
                 </p>
             <?php endif ?>
 

@@ -22,7 +22,7 @@
 
         </div>
         <div class="section">
-            <h3>Welcome, <?php echo $name ?>!</h3>
+            <h3>Welcome, <?php echo htmlEscape($name); ?>!</h3>
             <hr>
             <div class="row doctor-home">
                 <div class="four columns">&nbsp;</div>
@@ -35,7 +35,9 @@
 	                
 	                <!-- View Patient History button -->
 	                <a href="patientHistory.php" class="button button-primary u-full-width" >View Patient History</a>
-	                
+	                <hr>
+              
+                  <a href="changePassword.php" class="button button-primary u-full-width" >Change Your Password</a>
 	                <!-- Logout button -->
 	               <!-- <input class="button-primary" type="submit" value="Logout" id="submit-button" data-role="none">-->
 	                <a href="phpscripts/logout.php" class="button button-primary u-full-width" >Logout</a>
