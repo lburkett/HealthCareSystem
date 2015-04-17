@@ -43,7 +43,7 @@
 			return $this->db->query("SELECT
                                         *
                                      FROM
-                                        doctor");
+                                        doctor WHERE name != 'admin'");
 		}
 	}
 ?>
