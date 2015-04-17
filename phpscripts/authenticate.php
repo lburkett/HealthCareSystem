@@ -80,6 +80,15 @@
 		}
 	}
 
+	function getDoctorUsername() {
+		if (isLoggedIn()) {
+			// Might need to be an array with both the logged_in_username and logged_in_doctor
+			return $_SESSION['logged_in_username'];
+		}
+		else {
+			return null;
+		}
+	}
 	/* Checks if there is a doctor logged in */
 	function isLoggedIn() {
 		return isset($_SESSION['logged_in_username']);

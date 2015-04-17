@@ -80,5 +80,18 @@
                                      WHERE
                                         name <> 'admin'");
         }
+        public function getDoctorPasswordHash($username) {
+            $doctor = $this->db->query("SELECT * FROM doctor WHERE email = '". $username ."'");
+            if ($doctor === false) {
+                echo "query sucks";
+            }
+            $row = $doctor->fetch(PDO::FETCH_ASSOC);
+            return $row['password'];
+
+        }
+        public function setDoctorPassword($username, $password) {
+            $stmt = $this->db->prepare("UPDATE doctor SET password = '". $password ."' WHERE email = '". $username ."' ");
+            $stmt->execute();
+        }
 	}
 ?>
