@@ -17,7 +17,7 @@
     $username = getDoctorUsername();
     $oldpwd = $_POST['oldpwd'];
     $newpwd1 = $_POST['newpwd1'];
-    $newpwd1 = $_POST['newpwd2'];
+    $newpwd2 = $_POST['newpwd2'];
     $oldHash = $manager->getDoctorPasswordHash($username);
     
     if ($oldpwd == $oldHash) {
@@ -95,7 +95,7 @@ $(document).bind("mobileinit", function () {
             echo "THERE WAS AN ERROR, TRY AGAIN.";
           }
           else if($_POST && $error == false) {
-            //Temporary
+            //Temporary solution
             echo "SUCCESS! CONGRATS! YOU ARE AMAZING! PASSWORD CHANGED!";
           }
         ?>
