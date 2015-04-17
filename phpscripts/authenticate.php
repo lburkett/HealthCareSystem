@@ -54,19 +54,40 @@
 		return $name;
 	}
 
+	function idLookup($usernameToLookup) {
+		$pdo = getPDO();
+
+		$stmt = $pdo->prepare("SELECT
+									id
+							   FROM
+							   		doctor
+							   WHERE
+							   		email = :username");
+
+		$stmt->bindParam(':username', $username);
+		$username = $usernameToLookup;
+
+		$stmt->execute();
+		$id = $stmt->fetchColumn();
+
+		return $id;
+	}
+
 	/* Sets up the session variable with the doctor's username
 	   and actual name for database useage later. */
-	function login($username, $name) {
+	function login($username, $name, $id) {
 		session_regenerate_id();
 
 		$_SESSION['logged_in_username'] = $username;
 		$_SESSION['logged_in_doctor'] = $name;
+		$_SESSION['logged_in_id'] = $id;
 	}
 
 	/* Unsets the session variables which logs the user out */
 	function logout() {
 		unset($_SESSION['logged_in_username']);
 		unset($_SESSION['logged_in_doctor']);
+		unset($_SESSION['logged_in_id']);
 	}
 
 	/* Returns the currently logged in doctor if there is one */

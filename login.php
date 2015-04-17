@@ -14,7 +14,8 @@
 
     if ($success) {
       $name = nameLookup($username);
-      login($username, $name);
+      $id = idLookup($username);
+      login($username, $name, $id);
 
       //header('Location: doctorHome.php');
       redirectAndExit('doctorHome.php');
