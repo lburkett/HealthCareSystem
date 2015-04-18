@@ -10,23 +10,24 @@
     redirectAndExit('login.php');
   }
   $name = $_SESSION['logged_in_doctor'];
+  $doctorid = $_SESSION['logged_in_id'];
   $error = false;
   if($_POST){
     //Verify Old Password
     $manager = new DatabaseManager;
-    $username = getDoctorUsername();
+    //$username = getDoctorUsername();
     $oldpwd = $_POST['oldpwd'];
     $newpwd1 = $_POST['newpwd1'];
     $newpwd2 = $_POST['newpwd2'];
-    $oldHash = $manager->getDoctorPasswordHash($username);
+    $oldHash = $manager->getDoctorPasswordHash($doctorid);
     
-    if ($oldpwd == $oldHash) {
+    if (password_verify($oldpwd, $oldHash)) {
       //Verify both new passwords were the same   
       
-      if ($newpwd1 == $newpwd2) {
+      if ($newpwd1 === $newpwd2) {
         //Update old password to new password 
         
-        $manager->setDoctorPassword($username, $newpwd1);
+        $manager->setDoctorPassword($doctorid, $newpwd1);
         
       } 
       else {
@@ -70,13 +71,13 @@ $(document).bind("mobileinit", function () {
         <p>Please enter the following information: </p>
         <hr>
         <?php 
-          if ($_POST && $error == true) { 
-            //Temporary solution
-            echo "THERE WAS AN ERROR, TRY AGAIN.";
+          if ($_POST && $error == true) { ?>
+            <div style="border: 1px solid #ff6666; padding: 6px; margin: 5px;">There was an error in the information you entered, try again.</div>
+        <?php
           }
-          else if($_POST && $error == false) {
-            //Temporary solution
-            echo "SUCCESS! CONGRATS! YOU ARE AMAZING! PASSWORD CHANGED!";
+          else if($_POST && $error == false) { ?>
+            <div style="border: 1px solid #66ff66; padding: 6px; margin: 5px;">Password changed successfully.</div>
+        <?php
           }
         ?>
       <div class="row">

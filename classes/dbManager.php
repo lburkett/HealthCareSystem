@@ -80,17 +80,19 @@
                                      WHERE
                                         name <> 'admin'");
         }
-        public function getDoctorPasswordHash($username) {
-            $doctor = $this->db->query("SELECT * FROM doctor WHERE email = '". $username ."'");
+
+        public function getDoctorPasswordHash($id) {
+            $doctor = $this->db->query("SELECT * FROM doctor WHERE id = '". $id ."'");
             if ($doctor === false) {
-                echo "query sucks";
+                echo "invalid query";
             }
             $row = $doctor->fetch(PDO::FETCH_ASSOC);
             return $row['password'];
 
         }
-        public function setDoctorPassword($username, $password) {
-            $stmt = $this->db->prepare("UPDATE doctor SET password = '". $password ."' WHERE email = '". $username ."' ");
+        public function setDoctorPassword($id, $password) {
+            $password = password_hash($password, PASSWORD_DEFAULT);
+            $stmt = $this->db->prepare("UPDATE doctor SET password = '". $password ."' WHERE id = '". $id ."' ");
             $stmt->execute();
         }
 	}
