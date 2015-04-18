@@ -47,9 +47,14 @@
 $(document).bind("mobileinit", function () {
     $.mobile.ajaxEnabled = false;
 });
-</script>          
-<script src="scripts/happy.js"></script>
+</script>  
+        
+        <script src="scripts/happy.js"></script>
+
 <script type="text/javascript">
+    
+ /*  Uncomment this after the chnage password functionality works */   
+    
    var happy = {
     notDoneYet: function () {
       alert("Please complete blank fields.");
