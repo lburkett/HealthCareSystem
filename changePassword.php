@@ -25,28 +25,28 @@ $(document).bind("mobileinit", function () {
     
  /*  Uncomment this after the chnage password functionality works */   
     
-/*   var happy = {
-    notDoneYet: function () {
-    	alert("Please complete blank fields.");
-    	return false;
-	    }
-	};
-	$(document).ready(function () {
-        $('.change-form').isHappy({
-          fields: {
-            '#oldpwd': {
-              required: true,
-            },
-            '#newpwd1': {
-              required: true,
-            },
-            '#newpwd2': {
-            	required: true,
-            }
-          },
-          unHappy: happy.notDoneYet
-        });
-      }); */
+//   var happy = {
+//    notDoneYet: function () {
+//    	alert("Please complete blank fields.");
+//    	return false;
+//	    }
+//	};
+//	$(document).ready(function () {
+//        $('.change-form').isHappy({
+//          fields: {
+//            '#oldpwd': {
+//              required: true,
+//            },
+//            '#newpwd1': {
+//              required: true,
+//            },
+//            '#newpwd2': {
+//            	required: true,
+//            }
+//          },
+//          unHappy: happy.notDoneYet
+//        });
+//      }); 
 </script>
 <?php require 'templates/header.php'; ?>
   <!-- Any content should go inside the container where indicated -->

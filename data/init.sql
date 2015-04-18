@@ -3,19 +3,19 @@
  */
 DROP TABLE IF EXISTS patient;
 CREATE TABLE patient (
-    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    fname VARCHAR NOT NULL,
-    lname VARCHAR NOT NULL,
-    phone VARCHAR NOT NULL,
-    filledOutBy VARCHAR NOT NULL,
-    doctorRequested VARCHAR,
-    pain INTEGER NOT NULL,
-    nausea INTEGER NOT NULL,
-    depression INTEGER NOT NULL,
-    anxiety INTEGER NOT NULL,
-    drowsiness INTEGER NOT NULL,
-    average REAL NOT NULL,
-    resolved INTEGER NOT NULL /* 0 - FALSE, 1 - TRUE */
+        id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+        fname VARCHAR NOT NULL,
+        lname VARCHAR NOT NULL,
+        phone VARCHAR NOT NULL,
+        filledOutBy VARCHAR NOT NULL,
+        doctorRequested VARCHAR,
+        pain INTEGER NOT NULL,
+        nausea INTEGER NOT NULL,
+        depression INTEGER NOT NULL,
+        anxiety INTEGER NOT NULL,
+        drowsiness INTEGER NOT NULL,
+        average REAL NOT NULL,
+        resolved INTEGER NOT NULL /* 0 - FALSE, 1 - TRUE */
 );
 
 DROP TABLE IF EXISTS doctor;
@@ -29,7 +29,7 @@ CREATE TABLE doctor (
 
 /*initialize database*/
 INSERT INTO doctor (name, profession, email, password) VALUES ('Dr. Bywater', 'Podiatrist', 'bywatch', 'asdf');
-INSERT INTO doctor (name, profession, email, password) VALUES ('Dr. Bhambhani', 'Sports Medicine', 'nikita', 'xyz');
+INSERT INTO doctor (name, profession, email, password) VALUES ('Dr. Bhambhani', 'Sports Medicine', 'nbhambha@asu.edu', 'xyz');
 INSERT INTO doctor (name, profession, email, password) VALUES ('Dr. Burkett', 'Optometry', 'laburket@asu.edu', 'password');
 INSERT INTO doctor (name, profession, email, password) VALUES ('Dr. Maddox', 'Pharmacy', 'clmaddox@asu.edu', '1234');
 INSERT INTO doctor (name, profession, email, password) VALUES ('Dr. Van', 'Pediatric', 'van', 'van');
