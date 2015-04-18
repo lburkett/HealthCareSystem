@@ -54,7 +54,7 @@ $(document).bind("mobileinit", function () {
   						<br><br>
                         
                         <!--  This is exactly like change password so the same id have been used for all						-->
-  						<input class="button-primary" type="submit" value="Submit" id="change-pwd" data-role="none">
+  						<input class="button-primary" type="submit" value="Reset Password" id="change-pwd" data-role="none">
                         
   					</form>
   				</div>
