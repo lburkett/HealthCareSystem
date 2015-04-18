@@ -362,3 +362,7 @@ $expander-color: #087BB8;
 	color: $red !important;
 	text-shadow: 0 0px 2px lighten($title-bg, 20%);
 }
+
+table.doctor-list {
+	word-break: break-word;
+}
