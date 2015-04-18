@@ -97,7 +97,8 @@ $(document).bind("mobileinit", function () {
             </form>
           </div>
             <div class="four columns"><br></div>  
-        </div>  
+        </div> 
+        <a href="doctorHome.php">Return to Menu</a><br><br>
 
     </div>
   </div>

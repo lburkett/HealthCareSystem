@@ -80,11 +80,14 @@ $(function() {
             </div>
           </div>
         </div>
+        <p>
         <?php } //END LOOP
-          if (!$looped) {
-            echo "There appear to be no patients requiring immediate assistance. Keep up the good work!";
-          }
-        ?>
+            if (!$looped) {
+              echo "There appear to be no patients requiring immediate assistance. Keep up the good work!";
+            }
+          ?>
+          </p>
+        <a href="doctorHome.php">Return to Menu</a>
     </div>
   </div>
 
