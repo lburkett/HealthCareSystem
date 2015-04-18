@@ -50,7 +50,6 @@ $(document).bind("mobileinit", function () {
 </script>          
 <script src="scripts/happy.js"></script>
 <script type="text/javascript">
-<<<<<<< HEAD
    var happy = {
     notDoneYet: function () {
       alert("Please complete blank fields.");
@@ -58,17 +57,6 @@ $(document).bind("mobileinit", function () {
       }
   };
   $(document).ready(function () {
-=======
-    
- /*  Uncomment this after the chnage password functionality works */   
-    
-/*   var happy = {
-    notDoneYet: function () {
-    	alert("Please complete blank fields.");
-    	return false;
-	    }
-	};
-	$(document).ready(function () {
 </script>
 <?php require 'templates/headerDoctor.php'; ?>
   <!-- Any content should go inside the container where indicated -->
