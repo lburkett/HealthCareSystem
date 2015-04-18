@@ -1,5 +1,6 @@
 <?php
 	require_once 'common.php';
+	require_once 'password.php';
 
 	/* Attemps to authenticate the doctor based on their username.
 	   Returns True if the login attempt succeeds. */
@@ -26,8 +27,8 @@
 
 	/* Checks if the given strings are the same.
 	   Very primative, no password hashing. */
-	function passwordCheck($password, $passwordToCheck) {
-		if ($password === $passwordToCheck)
+	function passwordCheck($passwordToCheck, $hash) {
+		if (password_verify($passwordToCheck, $hash))
 			return true;
 		else
 			return false;

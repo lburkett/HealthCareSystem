@@ -12,18 +12,16 @@
 	$newDoctor->setname($_POST['name']);
 	$newDoctor->setprofession($_POST['profession']);
 	$newDoctor->setemail($_POST['email']);
-	$password = $_POST['password'];
-	$hash = password_hash($password, PASSWORD_DEFAULT)
-	//$newDoctor->setpassword($hash);
+	$hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
+	$newDoctor->setpassword($hash);
 
 	//$check = password_verify($_POST['password'], $hash);
-	echo $hash;
 
 	// Prints out new doctor information
 	//$newDoctor->__toString();
     
-    // Inserts a patient and tests a query
+    // Inserts a doctor and tests a query
     $manager->addDoctor($newDoctor);
 
-    //redirectAndExit("../adminHome.php");
+    redirectAndExit("../adminHome.php");
 ?>
