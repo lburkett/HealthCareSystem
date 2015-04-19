@@ -18,14 +18,26 @@ function randomPass(){
 }
 
 //updates the database with hashed password
-function updateDB($password, $username){
-    //$hash = password_hash($password, PASSWORD_DEFAULT);
- 
+/*function updb($password, $email) {
     $pdo = getPDO();
-    $stmt = $pdo->prepare("UPDATE doctor SET password = '". $password ."' WHERE email = '". $username ."' ");
+
+    $hash = password_hash($password, PASSWORD_DEFAULT);
+
+    $stmt = $pdo->prepare("UPDATE
+                                doctor
+                            SET
+                                password = :password
+                            WHERE
+                                email = :username"); 
+        
+    
+    $stmt->bindParam(':username', $username);
+    $stmt->bindParam(':password', $password);
+    $username = $email;
+    $password = $hash;
 
     $stmt->execute();
- }   
+}*/
 
 /*function sendEmail($email, $password){      
     

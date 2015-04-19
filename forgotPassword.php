@@ -2,6 +2,7 @@
     require 'templates/meta.php';
     require_once 'phpscripts/common.php';
     require_once 'phpscripts/forgot.php';
+    require_once 'phpscripts/password.php';
 
     $tempPass = '';
 
@@ -23,13 +24,33 @@
         $stmt->bindParam(':username', $username);
         $username = $email;
         $stmt->execute();
+
         // Check to make sure the email exists, if it does then continue
         if ($stmt) {
-            // execute code
-            // show confirmation
             $tempPass = randomPass();
             //sendEmail($email, $tempPass);
-            updateDB($tempPass, $username);
+
+            //updb($tempPass, $email);
+
+            // Updates the specified user's password, can't move 
+            //  into seperate block for whatever reason so here it is.
+            $hash = password_hash($tempPass, PASSWORD_DEFAULT);
+
+            $stmt = $pdo->prepare("UPDATE
+                                      doctor
+                                    SET
+                                      password = :password
+                                    WHERE
+                                      email = :username"); 
+        
+    
+            $stmt->bindParam(':username', $username);
+            $stmt->bindParam(':password', $password);
+            $username = $email;
+            $password = $hash;
+
+            $stmt->execute();
+            
             //redirectAndExit('confirm.php'); //Change confirm.php so that it shows for ~5 sec            
         }
         else {
