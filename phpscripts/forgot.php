@@ -4,35 +4,30 @@ require_once 'common.php';
 
 //random password
 function randomPass(){   
-    $length = 10;
+    // Creates a random password
     $alpha = range(ord('A'), ord('z'));
-        $alphaLength = count($alpha);
+    $alphaLength = count($alpha);
 
-        $password = '';
-        for($i = 0; $i < $length; $i++) 
-            $letterCode = $alpha[rand(0, $alphaLength - 1)];
+    $password = '';
+    for($i = 0; $i < 10; $i++) {
+        $letterCode = $alpha[rand(0, $alphaLength - 1)];
+        $password .= chr($letterCode);
+    }
             
-    $password .= chr($letterCode);
     return $password;
 }
 
 //updates the database with hashed password
 function updateDB($password, $username){
-    $hash = password_hash($password, PASSWORD_DEFAULT);
+    //$hash = password_hash($password, PASSWORD_DEFAULT);
  
     $pdo = getPDO();
-    $stmt->prepare("UPDATE
-                            doctor
-                    SET
-                            password = :password
-                    WHERE 
-                            email = :username" );
-    stmt->bindParam(':username', $username);
-    stmt->bindParam(':password', $hash);
+    $stmt = $pdo->prepare("UPDATE doctor SET password = '". $password ."' WHERE email = '". $username ."' ");
+
     $stmt->execute();
  }   
 
-function sendEmail($email, $password){      
+/*function sendEmail($email, $password){      
     
         $to      = '$email';
         $subject = 'Temp Password';
@@ -43,7 +38,5 @@ function sendEmail($email, $password){
         mail($to, $subject, $message, $headers);
        
   
-}
-
-
+}*/
 ?>
