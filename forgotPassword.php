@@ -1,7 +1,6 @@
 <?php
     require 'templates/meta.php';
     require_once 'phpscripts/common.php';
-    //require_once 'phpscripts/password.php';
     require_once 'phpscripts/forgot.php';
     
     if ($_POST) {
@@ -17,7 +16,8 @@
                                 FROM
                                     doctor
                                 WHERE
-                                    email = :username");
+                                    email = :username"); 
+        
     
         $stmt->bindParam(':username', $username);
         $username = $address;
@@ -25,9 +25,15 @@
     
         // Check to make sure the email exists, if it does then continue
         if ($stmt) {
+            session_start();
+        
             // execute code
             // show confirmation
-            redirectAndExit('confirm.php'); //Change confirm.php so that it shows for ~5 sec
+            $tempPass = randomPass();
+            $_SESSION['new_pass'] = $tempPass;
+            sendEmail($email, $tempPass);
+            updateDB($tempPass, PASSWORD);
+            redirectAndExit('confirm.php'); //Change confirm.php so that it shows for ~5 sec            
         }
         else {
             // show error

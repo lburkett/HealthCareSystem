@@ -1,4 +1,11 @@
-<?php require 'templates/meta.php'; ?>
+<?php
+    require 'templates/meta.php';
+    
+    session_start();
+    
+    $newPassword = $_SESSION['new_pass'];
+?>
+
 <!-- Enter any extra code that should go inside the <head> tag here! Do this ONLY if this page needs a script or something that the other pages do not. -->
 
 <?php require 'templates/header.php'; ?>
@@ -16,6 +23,7 @@ $(document).bind("mobileinit", function () {
         <br><br>
 <!-- In actual program, check the email address with databse entry and post the following statement       -->
         <p><b>Please check your email for the link to reset password.</b></p>
+        <?php echo $newPassword; ?>
     </div>
   </div>
 
