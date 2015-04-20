@@ -24,7 +24,7 @@
     if (password_verify($oldpwd, $oldHash)) {
       //Verify both new passwords were the same   
       
-      if ($newpwd1 === $newpwd2) {
+      if (($newpwd1 === $newpwd2) && ($newpwd1 !== '') && ($newpwd2 !== '')) {    //make sure passwords are the same and are not simply blank
         //Update old password to new password 
         
         $manager->setDoctorPassword($doctorid, $newpwd1);
@@ -43,12 +43,6 @@
 <!-- Enter any extra code that should go inside the <head> tag here! Do this ONLY if this page needs a script or something that the other pages do not. -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<script type="text/javascript">
-// Prevents the jQuery mobile handler from taking over screen switching. 
-$(document).bind("mobileinit", function () {
-    $.mobile.ajaxEnabled = false;
-});
-</script>          
 <script src="scripts/happy.js"></script>
 <script type="text/javascript">
    var happy = {
@@ -58,6 +52,21 @@ $(document).bind("mobileinit", function () {
       }
   };
   $(document).ready(function () {
+        $('.change-form').isHappy({
+          fields: {
+            '#oldpwd': {
+              required: true,
+            },
+            '#newpwd1': {
+              required: true,
+            },
+            '#newpwd2': {
+              required: true,
+            }
+          },
+          unHappy: happy.notDoneYet
+        });
+      });
 </script>
 <?php require 'templates/headerDoctor.php'; ?>
   <!-- Any content should go inside the container where indicated -->

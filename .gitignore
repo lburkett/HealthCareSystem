@@ -1,3 +1,4 @@
 # Database files
 *.sqlite
 *.map
+phpscripts/details.php
