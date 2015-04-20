@@ -1,6 +1,7 @@
 <?php
 	require_once 'phpscripts/common.php';
 	require_once 'phpscripts/install.php';
+    require_once 'phpscripts/password.php';
 
 	session_start();
 

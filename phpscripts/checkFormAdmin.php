@@ -23,5 +23,5 @@
     // Inserts a doctor and tests a query
     $manager->addDoctor($newDoctor);
 
-    redirectAndExit("../adminHome.php");
+    redirectAndExit("../adminhome.php");
 ?>

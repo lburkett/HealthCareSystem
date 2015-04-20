@@ -1,4 +1,5 @@
 <?php
+    require_once 'password.php';
     function installBlog() {
         // Get the PDO DSN string
         $root = getRootPath();
