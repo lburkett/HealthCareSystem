@@ -1,8 +1,8 @@
 <?php 
   require 'templates/meta.php'; 
   require_once 'phpscripts/authenticate.php';
-    require_once 'phpscripts/password.php';
-    require_once 'classes/dbManager.php';
+  require_once 'phpscripts/password.php';
+  require_once 'classes/dbManager.php';
 
   session_start();
 
@@ -15,20 +15,16 @@
   if($_POST){
     //Verify Old Password
     $manager = new DatabaseManager;
-    //$username = getDoctorUsername();
     $oldpwd = $_POST['oldpwd'];
     $newpwd1 = $_POST['newpwd1'];
     $newpwd2 = $_POST['newpwd2'];
     $oldHash = $manager->getDoctorPasswordHash($doctorid);
-    
-    if (password_verify($oldpwd, $oldHash)) {
-      //Verify both new passwords were the same   
-      
-      if (($newpwd1 === $newpwd2) && ($newpwd1 !== '') && ($newpwd2 !== '')) {    //make sure passwords are the same and are not simply blank
+    //Verify both new passwords were the same  
+    if (password_verify($oldpwd, $oldHash)) { 
+      //make sure passwords are the same and are not simply blank
+      if (($newpwd1 === $newpwd2) && ($newpwd1 !== '') && ($newpwd2 !== '')) {
         //Update old password to new password 
-        
         $manager->setDoctorPassword($doctorid, $newpwd1);
-        
       } 
       else {
         $error = true;
@@ -37,7 +33,6 @@
     else {
       $error = true;
     }
-    
   }
 ?>
 <!-- Enter any extra code that should go inside the <head> tag here! Do this ONLY if this page needs a script or something that the other pages do not. -->
