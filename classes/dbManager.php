@@ -67,8 +67,10 @@
 		}
 
 		/* Marks the patient id entered as resolved */
-		public function resolvePatient($id) {
-            
+		public function getResolve($id) {            
+            $patient = $this->db->query("SELECT * FROM patient WHERE id = '". $id ."'");
+            $row = $patient->fetch(PDO::FETCH_ASSOC);
+            return $row['resolved'];
 		}
 
         // Queries the database for a list of all doctors
