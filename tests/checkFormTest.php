@@ -17,8 +17,8 @@ class checkFormTest extends PHPUnit_Framework_TestCase{
 	}
 	
 	public function notCalculateAverageTest(){
-		$pati = new Patient();
-			
+			$pati = new Patient();
+				
 			$pati->setPain(5);
 			$pati->setNausea(5);
 			$pati->setDepression(5);
@@ -28,5 +28,5 @@ class checkFormTest extends PHPUnit_Framework_TestCase{
 			$result = $pati->calculateAverage();
 			$this->assertEquals(10, $result);
 	}
-	}
 }
+?>
