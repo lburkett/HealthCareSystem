@@ -2,7 +2,7 @@
 for CSE 360 - Intro to Software Engineering at Arizona State University.
 
 Most recent release on display at:
-http://patientcare.spencerbywater.me/
+http://patientcare.spencerbywater.com/
 
 Developed by:
 * [Lowell Burkett] (https://github.com/lburkett)
